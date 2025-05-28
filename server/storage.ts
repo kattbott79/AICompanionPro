@@ -1,4 +1,8 @@
-import { conversations, messages, templates, aiProviders, type Conversation, type Message, type Template, type AiProvider, type InsertConversation, type InsertMessage, type InsertTemplate, type InsertAiProvider } from "@shared/schema";
+import { 
+  conversations, messages, templates, aiProviders, integrations, userIntegrations, emotionalTriggerLogs,
+  type Conversation, type Message, type Template, type AiProvider, type Integration, type UserIntegration, type EmotionalTriggerLog,
+  type InsertConversation, type InsertMessage, type InsertTemplate, type InsertAiProvider, type InsertIntegration, type InsertUserIntegration, type InsertEmotionalTriggerLog
+} from "@shared/schema";
 
 export interface IStorage {
   // Conversation methods
@@ -58,10 +62,16 @@ export class MemStorage implements IStorage {
     this.messages = new Map();
     this.templates = new Map();
     this.aiProviders = new Map();
+    this.integrations = new Map();
+    this.userIntegrations = new Map();
+    this.emotionalTriggerLogs = new Map();
     this.currentConversationId = 1;
     this.currentMessageId = 1;
     this.currentTemplateId = 1;
     this.currentProviderId = 1;
+    this.currentIntegrationId = 1;
+    this.currentUserIntegrationId = 1;
+    this.currentTriggerLogId = 1;
     
     this.initializeData();
   }
@@ -698,6 +708,79 @@ export class MemStorage implements IStorage {
 
   async getAiProvider(type: string): Promise<AiProvider | undefined> {
     return this.aiProviders.get(type);
+  }
+
+  // Integration methods
+  async getIntegrations(): Promise<Integration[]> {
+    return Array.from(this.integrations.values());
+  }
+
+  async getIntegrationsByCategory(category: string): Promise<Integration[]> {
+    return Array.from(this.integrations.values()).filter(i => i.category === category);
+  }
+
+  async getIntegration(id: number): Promise<Integration | undefined> {
+    return this.integrations.get(id);
+  }
+
+  async createIntegration(integration: InsertIntegration): Promise<Integration> {
+    const id = ++this.currentIntegrationId;
+    const newIntegration: Integration = { ...integration, id };
+    this.integrations.set(id, newIntegration);
+    return newIntegration;
+  }
+
+  // User Integration methods
+  async getUserIntegrations(userId: string): Promise<UserIntegration[]> {
+    return this.userIntegrations.get(userId) || [];
+  }
+
+  async createUserIntegration(userIntegration: InsertUserIntegration): Promise<UserIntegration> {
+    const id = ++this.currentUserIntegrationId;
+    const newUserIntegration: UserIntegration = { 
+      ...userIntegration, 
+      id,
+      createdAt: new Date(),
+      lastUsed: null
+    };
+    
+    const userIntegrations = this.userIntegrations.get(userIntegration.userId) || [];
+    userIntegrations.push(newUserIntegration);
+    this.userIntegrations.set(userIntegration.userId, userIntegrations);
+    
+    return newUserIntegration;
+  }
+
+  async updateUserIntegration(id: number, updates: Partial<InsertUserIntegration>): Promise<UserIntegration | undefined> {
+    for (const [userId, integrations] of this.userIntegrations.entries()) {
+      const index = integrations.findIndex(ui => ui.id === id);
+      if (index !== -1) {
+        const updated = { ...integrations[index], ...updates };
+        integrations[index] = updated;
+        return updated;
+      }
+    }
+    return undefined;
+  }
+
+  // Emotional Trigger methods
+  async logEmotionalTrigger(log: InsertEmotionalTriggerLog): Promise<EmotionalTriggerLog> {
+    const id = ++this.currentTriggerLogId;
+    const newLog: EmotionalTriggerLog = { 
+      ...log, 
+      id,
+      timestamp: new Date()
+    };
+    
+    const logs = this.emotionalTriggerLogs.get(log.userIntegrationId) || [];
+    logs.push(newLog);
+    this.emotionalTriggerLogs.set(log.userIntegrationId, logs);
+    
+    return newLog;
+  }
+
+  async getEmotionalTriggerLogs(userIntegrationId: number): Promise<EmotionalTriggerLog[]> {
+    return this.emotionalTriggerLogs.get(userIntegrationId) || [];
   }
 }
 
