@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Gender-neutral Emotional AI Vibe - Modern and inclusive */
-  --background: 210 20% 98%; /* Clean neutral white */
-  --foreground: 215 25% 27%; /* Sophisticated dark blue-gray */
-  --muted: 210 20% 95%;
-  --muted-foreground: 215 16% 47%;
-  --popover: 210 20% 98%;
-  --popover-foreground: 215 25% 27%;
-  --card: 210 20% 98%;
-  --card-foreground: 215 25% 27%;
-  --border: 210 20% 87%;
-  --input: 210 20% 87%;
-  --primary: 195 100% 50%; /* Modern cyan-blue for clarity */
-  --primary-foreground: 210 40% 98%;
-  --secondary: 160 60% 45%; /* Calming teal for balance */
-  --secondary-foreground: 215 25% 27%;
-  --accent: 45 90% 60%; /* Warm amber for energy */
-  --accent-foreground: 215 25% 27%;
+  /* Beautiful Emotional AI - Pure Blue/Cyan/Teal Theme */
+  --background: 195 100% 98%; /* Light cyan-blue background */
+  --foreground: 195 100% 15%; /* Deep cyan text */
+  --muted: 190 60% 92%; /* Light blue muted */
+  --muted-foreground: 195 80% 25%; /* Cyan muted text */
+  --popover: 195 100% 98%; /* Light cyan popover */
+  --popover-foreground: 195 100% 15%; /* Deep cyan popover text */
+  --card: 195 100% 98%; /* Light cyan card */
+  --card-foreground: 195 100% 15%; /* Deep cyan card text */
+  --border: 190 40% 80%; /* Light blue border */
+  --input: 190 40% 85%; /* Light blue input */
+  --primary: 195 100% 50%; /* Bright cyan primary */
+  --primary-foreground: 195 100% 98%; /* Light cyan on primary */
+  --secondary: 160 60% 45%; /* Calming teal secondary */
+  --secondary-foreground: 195 100% 15%; /* Deep cyan on secondary */
+  --accent: 270 95% 60%; /* Purple accent for visual interest */
+  --accent-foreground: 195 100% 98%; /* Light cyan on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 195 100% 98%;
   --ring: 195 100% 50%;
   --radius: 0.75rem;
   
@@ -33,37 +33,37 @@
   --chart-5: 14 91% 54%;
   
   /* Sidebar colors */
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5% 34%;
-  --sidebar-primary: 207 90% 54%;
-  --sidebar-primary-foreground: 210 40% 98%;
-  --sidebar-accent: 210 40% 96%;
-  --sidebar-accent-foreground: 222 84% 4.9%;
-  --sidebar-border: 214 13% 91%;
-  --sidebar-ring: 222 84% 4.9%;
+  --sidebar-background: 195 100% 96%;
+  --sidebar-foreground: 195 100% 20%;
+  --sidebar-primary: 195 100% 50%;
+  --sidebar-primary-foreground: 195 100% 98%;
+  --sidebar-accent: 190 60% 92%;
+  --sidebar-accent-foreground: 195 100% 15%;
+  --sidebar-border: 190 40% 85%;
+  --sidebar-ring: 195 100% 50%;
 }
 
 .dark {
-  /* Gender-neutral Dark Theme - Professional and inclusive */
-  --background: 215 20% 7%; /* Deep neutral dark */
-  --foreground: 210 15% 93%; /* Clean light text */
-  --muted: 215 20% 12%;
-  --muted-foreground: 210 15% 70%;
-  --popover: 215 20% 8%;
-  --popover-foreground: 210 15% 93%;
-  --card: 215 20% 8%;
-  --card-foreground: 210 15% 93%;
-  --border: 215 20% 20%;
-  --input: 215 20% 20%;
-  --primary: 195 100% 60%; /* Bright modern cyan */
-  --primary-foreground: 215 20% 7%;
-  --secondary: 160 70% 35%; /* Deep calming teal */
-  --secondary-foreground: 210 15% 93%;
-  --accent: 45 90% 65%; /* Warm professional amber */
-  --accent-foreground: 215 20% 7%;
+  /* Beautiful Dark Emotional AI - Pure Blue/Cyan/Teal Theme */
+  --background: 195 80% 8%; /* Deep cyan-blue background */
+  --foreground: 195 100% 85%; /* Light cyan text */
+  --muted: 190 60% 15%; /* Dark blue muted */
+  --muted-foreground: 195 60% 70%; /* Light cyan muted text */
+  --popover: 195 80% 10%; /* Deep cyan popover */
+  --popover-foreground: 195 100% 85%; /* Light cyan popover text */
+  --card: 195 80% 10%; /* Deep cyan card */
+  --card-foreground: 195 100% 85%; /* Light cyan card text */
+  --border: 190 40% 25%; /* Dark blue border */
+  --input: 190 40% 20%; /* Dark blue input */
+  --primary: 195 100% 60%; /* Bright cyan primary */
+  --primary-foreground: 195 80% 8%; /* Deep cyan on primary */
+  --secondary: 160 70% 35%; /* Deep teal secondary */
+  --secondary-foreground: 195 100% 85%; /* Light cyan on secondary */
+  --accent: 270 95% 65%; /* Purple accent for visual interest */
+  --accent-foreground: 195 80% 8%; /* Deep cyan on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 207 90% 54%;
+  --destructive-foreground: 195 100% 98%;
+  --ring: 195 100% 60%;
   --radius: 0.75rem;
   
   /* Chart colors for dark theme */
@@ -74,14 +74,14 @@
   --chart-5: 14 91% 64%; /* Orange */
   
   /* Sidebar colors for dark theme */
-  --sidebar-background: 217 33% 15%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 207 90% 54%;
-  --sidebar-primary-foreground: 210 40% 98%;
-  --sidebar-accent: 217 33% 23%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 217 33% 23%;
-  --sidebar-ring: 207 90% 54%;
+  --sidebar-background: 195 60% 12%;
+  --sidebar-foreground: 195 100% 85%;
+  --sidebar-primary: 195 100% 60%;
+  --sidebar-primary-foreground: 195 80% 8%;
+  --sidebar-accent: 190 40% 18%;
+  --sidebar-accent-foreground: 195 100% 85%;
+  --sidebar-border: 190 40% 22%;
+  --sidebar-ring: 195 100% 60%;
 }
 
 @layer base {
@@ -149,7 +149,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #94a3b8;
+    background-color: #0891b2;
     margin: 0 2px;
     animation: typing 1.4s infinite ease-in-out;
   }
