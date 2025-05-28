@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Force light theme as default */
-  --background: 0 0% 100%; /* Pure white background */
-  --foreground: 222 84% 4.9%; /* Dark text */
-  --muted: 210 40% 98%;
-  --muted-foreground: 215 13.8% 44.1%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222 84% 4.9%;
-  --border: 214 13% 91%;
-  --input: 214 13% 91%;
-  --primary: 207 90% 54%;
+  /* Emotional AI Vibe - Vibrant and alive colors */
+  --background: 220 26% 97%; /* Soft warm white */
+  --foreground: 225 71% 12%; /* Deep emotional blue */
+  --muted: 220 20% 95%;
+  --muted-foreground: 220 13% 46%;
+  --popover: 220 26% 97%;
+  --popover-foreground: 225 71% 12%;
+  --card: 220 26% 97%;
+  --card-foreground: 225 71% 12%;
+  --border: 220 13% 87%;
+  --input: 220 13% 87%;
+  --primary: 262 83% 58%; /* Vibrant purple for emotional connection */
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 84% 4.9%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222 84% 4.9%;
+  --secondary: 315 71% 85%; /* Soft pink for warmth */
+  --secondary-foreground: 225 71% 12%;
+  --accent: 52 98% 76%; /* Energetic yellow for excitement */
+  --accent-foreground: 225 71% 12%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  --ring: 222 84% 4.9%;
+  --ring: 262 83% 58%;
   --radius: 0.75rem;
   
   /* Chart colors */

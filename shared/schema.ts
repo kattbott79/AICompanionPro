@@ -180,3 +180,99 @@ export type Template = typeof templates.$inferSelect;
 export type AiProvider = typeof aiProviders.$inferSelect;
 export type MentalHealthSession = typeof mentalHealthSessions.$inferSelect;
 export type InsuranceClaim = typeof insuranceClaimsAutomation.$inferSelect;
+
+// Integration Marketplace Schema
+export const integrations = pgTable("integrations", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  category: text("category").notNull(), // "communication", "productivity", "social", "finance", etc.
+  description: text("description").notNull(),
+  provider: text("provider").notNull(), // "slack", "gmail", "twitter", etc.
+  iconUrl: text("icon_url").notNull(),
+  color: text("color").notNull(),
+  isActive: boolean("is_active").notNull().default(true),
+  requiresAuth: boolean("requires_auth").notNull().default(true),
+  emotionalTriggers: jsonb("emotional_triggers").$type<{
+    supportedEmotions: string[];
+    triggerConditions: Array<{
+      emotion: string;
+      threshold: number;
+      action: string;
+    }>;
+  }>(),
+  configuration: jsonb("configuration").$type<{
+    authType: "oauth" | "api_key" | "webhook";
+    scopes: string[];
+    endpoints: Record<string, string>;
+    capabilities: string[];
+  }>(),
+  popularity: integer("popularity").notNull().default(0),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const userIntegrations = pgTable("user_integrations", {
+  id: serial("id").primaryKey(),
+  userId: text("user_id").notNull(),
+  integrationId: integer("integration_id").references(() => integrations.id).notNull(),
+  isConnected: boolean("is_connected").notNull().default(false),
+  connectionData: jsonb("connection_data").$type<{
+    accessToken?: string;
+    refreshToken?: string;
+    expiresAt?: string;
+    webhookUrl?: string;
+    customConfig?: Record<string, any>;
+  }>(),
+  emotionalSettings: jsonb("emotional_settings").$type<{
+    enabledTriggers: Array<{
+      emotion: string;
+      threshold: number;
+      action: string;
+      isActive: boolean;
+    }>;
+    responsePreferences: {
+      tone: "supportive" | "energetic" | "calm" | "professional";
+      intensity: "low" | "medium" | "high";
+    };
+  }>(),
+  createdAt: timestamp("created_at").defaultNow(),
+  lastUsed: timestamp("last_used"),
+});
+
+export const emotionalTriggerLogs = pgTable("emotional_trigger_logs", {
+  id: serial("id").primaryKey(),
+  userIntegrationId: integer("user_integration_id").references(() => userIntegrations.id).notNull(),
+  sessionId: text("session_id").notNull(),
+  detectedEmotion: text("detected_emotion").notNull(),
+  emotionConfidence: integer("emotion_confidence").notNull(), // 0-100
+  triggerAction: text("trigger_action").notNull(),
+  actionResult: jsonb("action_result").$type<{
+    success: boolean;
+    response?: string;
+    error?: string;
+    integrationResponse?: Record<string, any>;
+  }>(),
+  timestamp: timestamp("timestamp").defaultNow(),
+});
+
+export const insertIntegrationSchema = createInsertSchema(integrations).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertUserIntegrationSchema = createInsertSchema(userIntegrations).omit({
+  id: true,
+  createdAt: true,
+  lastUsed: true,
+});
+
+export const insertEmotionalTriggerLogSchema = createInsertSchema(emotionalTriggerLogs).omit({
+  id: true,
+  timestamp: true,
+});
+
+export type Integration = typeof integrations.$inferSelect;
+export type UserIntegration = typeof userIntegrations.$inferSelect;
+export type EmotionalTriggerLog = typeof emotionalTriggerLogs.$inferSelect;
+export type InsertIntegration = z.infer<typeof insertIntegrationSchema>;
+export type InsertUserIntegration = z.infer<typeof insertUserIntegrationSchema>;
+export type InsertEmotionalTriggerLog = z.infer<typeof insertEmotionalTriggerLogSchema>;

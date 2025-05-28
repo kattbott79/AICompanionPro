@@ -20,6 +20,21 @@ export interface IStorage {
   getAiProviders(): Promise<AiProvider[]>;
   getActiveAiProviders(): Promise<AiProvider[]>;
   getAiProvider(type: string): Promise<AiProvider | undefined>;
+  
+  // Integration methods
+  getIntegrations(): Promise<Integration[]>;
+  getIntegrationsByCategory(category: string): Promise<Integration[]>;
+  getIntegration(id: number): Promise<Integration | undefined>;
+  createIntegration(integration: InsertIntegration): Promise<Integration>;
+  
+  // User Integration methods
+  getUserIntegrations(userId: string): Promise<UserIntegration[]>;
+  createUserIntegration(userIntegration: InsertUserIntegration): Promise<UserIntegration>;
+  updateUserIntegration(id: number, updates: Partial<InsertUserIntegration>): Promise<UserIntegration | undefined>;
+  
+  // Emotional Trigger methods
+  logEmotionalTrigger(log: InsertEmotionalTriggerLog): Promise<EmotionalTriggerLog>;
+  getEmotionalTriggerLogs(userIntegrationId: number): Promise<EmotionalTriggerLog[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -27,10 +42,16 @@ export class MemStorage implements IStorage {
   private messages: Map<number, Message[]>;
   private templates: Map<number, Template>;
   private aiProviders: Map<string, AiProvider>;
+  private integrations: Map<number, Integration>;
+  private userIntegrations: Map<string, UserIntegration[]>;
+  private emotionalTriggerLogs: Map<number, EmotionalTriggerLog[]>;
   private currentConversationId: number;
   private currentMessageId: number;
   private currentTemplateId: number;
   private currentProviderId: number;
+  private currentIntegrationId: number;
+  private currentUserIntegrationId: number;
+  private currentTriggerLogId: number;
 
   constructor() {
     this.conversations = new Map();
