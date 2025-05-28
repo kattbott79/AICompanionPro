@@ -249,7 +249,12 @@ export class HumeAIProvider implements AIProvider {
   }
 
   private getEmotionalAdaptation(emotions: Record<string, number>): string {
-    const topEmotion = Object.entries(emotions).reduce((a, b) => 
+    const emotionEntries = Object.entries(emotions);
+    if (emotionEntries.length === 0) {
+      return "with understanding and empathy";
+    }
+    
+    const topEmotion = emotionEntries.reduce((a, b) => 
       emotions[a[0]] > emotions[b[0]] ? a : b
     );
     
