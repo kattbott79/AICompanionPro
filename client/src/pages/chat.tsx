@@ -52,7 +52,6 @@ export default function Chat() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900">
-      {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
         <div className="hidden lg:flex w-80 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-r border-gray-200/50 dark:border-gray-700/50 flex-col shadow-lg">
@@ -277,6 +276,8 @@ export default function Chat() {
           </Button>
         </div>
       )}
+        </div>
+      </div>
     </div>
   );
 }
