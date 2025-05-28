@@ -55,8 +55,8 @@ export default function Chat() {
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl border-r border-gray-200/20 dark:border-gray-700/20 flex-col shadow-lg">
-          <div className="p-6 border-b border-gray-200/20 dark:border-gray-700/20">
+        <div className="hidden lg:flex w-80 bg-gradient-to-b from-blue-50/80 via-cyan-50/80 to-teal-50/80 dark:from-blue-900/40 dark:via-cyan-900/40 dark:to-teal-900/40 backdrop-blur-xl border-r border-blue-200/30 dark:border-blue-700/30 flex-col shadow-lg">
+          <div className="p-6 border-b border-blue-200/30 dark:border-blue-700/30">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
@@ -108,7 +108,7 @@ export default function Chat() {
 
             {/* Popular Templates Preview */}
             {!showTemplates && (
-              <Card className="bg-white/80 dark:bg-gray-800/50 border-gray-200/50 dark:border-gray-700/50">
+              <Card className="bg-gradient-to-br from-white/90 via-purple-50/20 to-green-50/20 dark:bg-gradient-to-br dark:from-gray-800/50 dark:via-purple-900/20 dark:to-green-900/20 border-blue-200/30 dark:border-blue-700/30 shadow-lg">
                 <CardContent className="p-4">
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-200">Popular Templates</h3>
                   <div className="space-y-3">
@@ -179,7 +179,7 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/20 dark:border-gray-700/20 bg-white/70 dark:bg-gray-900/40 backdrop-blur-sm shadow-lg">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-blue-200/30 dark:border-blue-700/30 bg-gradient-to-r from-blue-50/80 via-cyan-50/80 to-teal-50/80 dark:from-blue-900/40 dark:via-cyan-900/40 dark:to-teal-900/40 backdrop-blur-sm shadow-lg">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full overflow-hidden">
                 <img 
