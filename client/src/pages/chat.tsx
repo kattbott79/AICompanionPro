@@ -55,7 +55,7 @@ export default function Chat() {
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-gradient-to-br from-teal-50/80 via-blue-50/80 to-purple-50/80 dark:bg-gradient-to-br dark:from-teal-900/30 dark:via-blue-900/30 dark:to-purple-900/30 backdrop-blur-sm border-r border-gradient-to-b from-teal-200/30 to-purple-200/30 flex-col shadow-lg">
+        <div className="hidden lg:flex w-80 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-r border-gray-200/50 dark:border-gray-700/50 flex-col shadow-lg">
           <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
