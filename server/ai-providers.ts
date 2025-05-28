@@ -1,0 +1,284 @@
+import OpenAI from "openai";
+
+// AI Provider interfaces
+export interface AIResponse {
+  content: string;
+  emotionalContext?: Record<string, any>;
+  suggestions?: string[];
+}
+
+export interface VoiceAnalysis {
+  transcript: string;
+  emotions: Record<string, number>;
+  confidence: number;
+}
+
+export interface AIProvider {
+  generateResponse(message: string, context?: Record<string, any>): Promise<AIResponse>;
+  analyzeVoice?(audioData: Buffer): Promise<VoiceAnalysis>;
+}
+
+// OpenAI Provider
+export class OpenAIProvider implements AIProvider {
+  private client: OpenAI;
+
+  constructor() {
+    const apiKey = process.env.OPENAI_API_KEY || process.env.VITE_OPENAI_API_KEY;
+    if (!apiKey) {
+      throw new Error("OpenAI API key not provided");
+    }
+    this.client = new OpenAI({ apiKey });
+  }
+
+  async generateResponse(message: string, context?: Record<string, any>): Promise<AIResponse> {
+    try {
+      const systemPrompt = this.buildSystemPrompt(context);
+      
+      // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
+      const response = await this.client.chat.completions.create({
+        model: "gpt-4o",
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: message }
+        ],
+        temperature: 0.7,
+        max_tokens: 500,
+      });
+
+      const content = response.choices[0].message.content || "";
+      
+      return {
+        content,
+        suggestions: this.generateSuggestions(context)
+      };
+    } catch (error) {
+      console.error("OpenAI API error:", error);
+      throw new Error("Failed to generate response with OpenAI");
+    }
+  }
+
+  private buildSystemPrompt(context?: Record<string, any>): string {
+    const basePrompt = `You are an emotionally intelligent AI automation consultant. You help users automate their business processes and personal life with compassion and expertise.
+
+Guidelines:
+- Be friendly, supportive, and enthusiastic about helping
+- Ask clarifying questions to understand their specific needs
+- Suggest practical automation solutions
+- Show genuine excitement about helping them save time
+- Keep responses conversational and encouraging
+- Focus on real-world benefits and time savings`;
+
+    if (context?.selectedTemplate) {
+      return `${basePrompt}\n\nCurrent context: The user is interested in "${context.selectedTemplate}" automation template.`;
+    }
+
+    if (context?.currentStep) {
+      return `${basePrompt}\n\nConversation step: ${context.currentStep}`;
+    }
+
+    return basePrompt;
+  }
+
+  private generateSuggestions(context?: Record<string, any>): string[] {
+    if (context?.currentStep === "initial") {
+      return [
+        "🏢 Business Automation",
+        "🏠 Personal Life Helper",
+        "🎨 Let me explore options",
+        "⚡ I have something specific in mind"
+      ];
+    }
+
+    if (context?.currentStep === "business_selection") {
+      return [
+        "E-commerce Store",
+        "Service Business",
+        "Restaurant/Retail",
+        "Content Creator",
+        "Other type of business"
+      ];
+    }
+
+    if (context?.currentStep === "personal_selection") {
+      return [
+        "Daily Productivity",
+        "Health & Wellness",
+        "Financial Management",
+        "Home Management",
+        "Something else personal"
+      ];
+    }
+
+    return [];
+  }
+}
+
+// Hume AI Provider (placeholder - would need actual Hume AI SDK)
+export class HumeAIProvider implements AIProvider {
+  private apiKey: string;
+
+  constructor() {
+    this.apiKey = process.env.HUME_AI_API_KEY || process.env.VITE_HUME_AI_API_KEY || "";
+    if (!this.apiKey) {
+      console.warn("Hume AI API key not provided, using fallback responses");
+    }
+  }
+
+  async generateResponse(message: string, context?: Record<string, any>): Promise<AIResponse> {
+    try {
+      // This would integrate with actual Hume AI API
+      // For now, providing emotionally aware responses
+      const emotionallyAwareResponse = this.generateEmotionallyAwareResponse(message, context);
+      
+      return {
+        content: emotionallyAwareResponse,
+        emotionalContext: {
+          detectedEmotion: this.detectEmotion(message),
+          responseEmotion: "supportive",
+          empathyLevel: 0.8
+        },
+        suggestions: this.generateContextualSuggestions(context)
+      };
+    } catch (error) {
+      console.error("Hume AI error:", error);
+      throw new Error("Failed to generate emotionally aware response");
+    }
+  }
+
+  async analyzeVoice(audioData: Buffer): Promise<VoiceAnalysis> {
+    // This would integrate with Hume AI voice analysis API
+    // Placeholder implementation
+    return {
+      transcript: "Voice analysis placeholder",
+      emotions: {
+        joy: 0.7,
+        enthusiasm: 0.8,
+        calm: 0.6
+      },
+      confidence: 0.85
+    };
+  }
+
+  private generateEmotionallyAwareResponse(message: string, context?: Record<string, any>): string {
+    const emotion = this.detectEmotion(message);
+    
+    if (emotion === "excited") {
+      return "I can feel your excitement! 🌟 That energy is exactly what we need to create something amazing together. Let's channel that enthusiasm into building the perfect automation for you!";
+    }
+    
+    if (emotion === "uncertain") {
+      return "I sense you might be feeling a bit uncertain, and that's completely normal! 💙 Automation can seem overwhelming at first, but I'm here to guide you through every step. We'll take this at your pace.";
+    }
+    
+    if (emotion === "frustrated") {
+      return "I can tell you might be feeling frustrated with your current processes. 🤗 You're in the right place! Let's work together to eliminate those pain points and give you back your valuable time.";
+    }
+    
+    return "I'm genuinely excited to help you! 🚀 Together, we'll create an automation solution that not only saves you time but also makes your daily life more enjoyable.";
+  }
+
+  private detectEmotion(message: string): string {
+    const lowerMessage = message.toLowerCase();
+    
+    if (lowerMessage.includes("excited") || lowerMessage.includes("amazing") || lowerMessage.includes("love")) {
+      return "excited";
+    }
+    
+    if (lowerMessage.includes("not sure") || lowerMessage.includes("maybe") || lowerMessage.includes("help")) {
+      return "uncertain";
+    }
+    
+    if (lowerMessage.includes("frustrated") || lowerMessage.includes("tired") || lowerMessage.includes("waste")) {
+      return "frustrated";
+    }
+    
+    return "neutral";
+  }
+
+  private generateContextualSuggestions(context?: Record<string, any>): string[] {
+    return [
+      "Tell me more about your current challenges",
+      "What takes up most of your time?",
+      "Let's explore some templates",
+      "I'd like to see examples"
+    ];
+  }
+}
+
+// Ollama Provider (local)
+export class OllamaProvider implements AIProvider {
+  private baseUrl: string;
+
+  constructor() {
+    this.baseUrl = process.env.OLLAMA_BASE_URL || "http://localhost:11434";
+  }
+
+  async generateResponse(message: string, context?: Record<string, any>): Promise<AIResponse> {
+    try {
+      const response = await fetch(`${this.baseUrl}/api/generate`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "deepseek-r1:latest", // Default to deepseek as requested
+          prompt: this.buildPrompt(message, context),
+          stream: false,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Ollama API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      return {
+        content: data.response || "I apologize, but I couldn't generate a response.",
+        suggestions: this.generateSuggestions(context)
+      };
+    } catch (error) {
+      console.error("Ollama error:", error);
+      throw new Error("Failed to connect to local Ollama instance. Make sure Ollama is running.");
+    }
+  }
+
+  private buildPrompt(message: string, context?: Record<string, any>): string {
+    const systemContext = `You are a friendly and knowledgeable AI automation consultant. You help people automate their business processes and personal tasks.
+
+Be conversational, supportive, and practical in your responses. Focus on understanding their needs and suggesting specific automation solutions.
+
+Current conversation context: ${JSON.stringify(context || {})}
+
+User message: ${message}
+
+Response:`;
+
+    return systemContext;
+  }
+
+  private generateSuggestions(context?: Record<string, any>): string[] {
+    return [
+      "Tell me more about that",
+      "What other areas need automation?",
+      "Let's look at some templates",
+      "How much time do you spend on this?"
+    ];
+  }
+}
+
+// Provider factory
+export class AIProviderFactory {
+  static createProvider(type: string): AIProvider {
+    switch (type) {
+      case "openai":
+        return new OpenAIProvider();
+      case "hume":
+        return new HumeAIProvider();
+      case "ollama":
+        return new OllamaProvider();
+      default:
+        throw new Error(`Unknown AI provider type: ${type}`);
+    }
+  }
+}
