@@ -188,6 +188,61 @@ export class MemStorage implements IStorage {
       }
     ];
 
+    // Add Mental Health Templates
+    defaultTemplates.push(
+      {
+        id: 10,
+        name: "Universal EMR Therapy Notes Assistant",
+        category: "healthcare",
+        subcategory: "mental-health",
+        description: "AI-powered SOAP note generation, session analysis, and progress tracking for any EMR system",
+        icon: "fas fa-brain",
+        color: "green",
+        timesSaved: "8 hours/week",
+        rating: 5,
+        userCount: 342,
+        configuration: {
+          integrations: ["SimplePractice", "TherapyNotes", "TheraNest", "Epic", "Any EMR via API"],
+          features: ["SOAP Format Conversion", "Session Analysis", "Risk Assessment", "Progress Tracking"]
+        },
+        isActive: true
+      },
+      {
+        id: 11,
+        name: "Insurance Claims Automation",
+        category: "healthcare", 
+        subcategory: "billing",
+        description: "Automated CMS-1500 generation, claim validation, and rejection analysis with AI-powered solutions",
+        icon: "fas fa-file-medical",
+        color: "purple",
+        timesSaved: "12 hours/week",
+        rating: 5,
+        userCount: 89,
+        configuration: {
+          integrations: ["Any Clearinghouse", "Payer Portals", "EMR Billing Modules"],
+          features: ["CMS-1500 Generation", "Claim Validation", "Rejection Analysis", "Resubmission Automation"]
+        },
+        isActive: true
+      },
+      {
+        id: 12,
+        name: "Mental Health Practice Dashboard",
+        category: "healthcare",
+        subcategory: "practice-management", 
+        description: "Comprehensive automation for scheduling, documentation, billing, and client communication",
+        icon: "fas fa-hospital",
+        color: "yellow",
+        timesSaved: "20 hours/week",
+        rating: 5,
+        userCount: 156,
+        configuration: {
+          integrations: ["Any EMR", "Scheduling Systems", "Payment Processors", "Communication Tools"],
+          features: ["Automated Scheduling", "Documentation Assistance", "Billing Automation", "Client Portal Integration"]
+        },
+        isActive: true
+      }
+    );
+
     // Initialize AI providers
     const defaultProviders: AiProvider[] = [
       {
