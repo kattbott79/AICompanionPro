@@ -135,9 +135,9 @@ export default function Chat() {
                         alt="Service business automation" 
                         className="w-full h-16 object-cover rounded mb-2" 
                       />
-                      <h4 className="font-medium text-green-400 text-sm mb-1">Service Business</h4>
-                      <p className="text-xs text-gray-400">Appointment scheduling, client follow-ups, invoicing</p>
-                      <div className="flex items-center mt-2 text-xs text-gray-500">
+                      <h4 className="font-medium text-green-600 dark:text-green-400 text-sm mb-1">Service Business</h4>
+                      <p className="text-xs text-blue-600 dark:text-blue-400">Appointment scheduling, client follow-ups, invoicing</p>
+                      <div className="flex items-center mt-2 text-xs text-cyan-500 dark:text-cyan-400">
                         <span>★ 4.9</span>
                         <span className="mx-2">•</span>
                         <span>890 users</span>
