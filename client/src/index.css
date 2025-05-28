@@ -3,44 +3,44 @@
 @tailwind utilities;
 
 :root {
-  /* Beautiful Cyan-Blue-Teal Theme - NO DARK MODE, NO GREY */
-  --background: 194 100% 97%; /* Pure cyan-teal background */
+  /* EXACT COLORS FROM INTEGRATIONS PAGE - cyan-50, blue-50, teal-50 */
+  --background: 194 100% 97%; /* cyan-50 equivalent */
   --foreground: 188 85% 15%; /* Deep teal text */
-  --muted: 194 60% 95%; /* Light cyan muted */
-  --muted-foreground: 188 70% 35%; /* Teal muted text */
-  --popover: 194 100% 98%; /* Bright cyan popover */
+  --muted: 200 100% 95%; /* blue-50 equivalent */
+  --muted-foreground: 194 60% 40%; /* Cyan muted text */
+  --popover: 194 100% 97%; /* cyan-50 popover */
   --popover-foreground: 188 85% 15%; /* Deep teal popover text */
-  --card: 194 100% 98%; /* Bright cyan card */
+  --card: 255 100% 100%; /* Pure white cards */
   --card-foreground: 188 85% 15%; /* Deep teal card text */
-  --border: 194 40% 85%; /* Light cyan border */
-  --input: 194 40% 90%; /* Light cyan input */
-  --primary: 188 100% 45%; /* Vibrant teal primary */
-  --primary-foreground: 194 100% 98%; /* Light cyan on primary */
-  --secondary: 174 60% 50%; /* Bright teal secondary */
-  --secondary-foreground: 194 100% 98%; /* Light cyan on secondary */
-  --accent: 188 100% 45%; /* Teal accent */
-  --accent-foreground: 194 100% 98%; /* Light cyan on accent */
+  --border: 194 50% 88%; /* Light cyan border */
+  --input: 194 50% 92%; /* Light cyan input */
+  --primary: 194 100% 42%; /* cyan-600 primary */
+  --primary-foreground: 255 100% 100%; /* White on primary */
+  --secondary: 180 60% 50%; /* teal-500 secondary */
+  --secondary-foreground: 255 100% 100%; /* White on secondary */
+  --accent: 200 100% 50%; /* blue-500 accent */
+  --accent-foreground: 255 100% 100%; /* White on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 194 100% 98%;
-  --ring: 188 100% 45%;
+  --destructive-foreground: 255 100% 100%;
+  --ring: 194 100% 42%;
   --radius: 0.75rem;
   
-  /* Chart colors - cyan/teal theme */
-  --chart-1: 194 90% 60%;
-  --chart-2: 174 76% 50%;
-  --chart-3: 188 93% 55%;
-  --chart-4: 200 87% 60%;
-  --chart-5: 180 91% 65%;
+  /* Chart colors - matching gradient theme */
+  --chart-1: 194 100% 42%; /* cyan-600 */
+  --chart-2: 200 100% 50%; /* blue-500 */
+  --chart-3: 180 60% 50%; /* teal-500 */
+  --chart-4: 194 80% 60%; /* lighter cyan */
+  --chart-5: 200 80% 65%; /* lighter blue */
   
-  /* Sidebar colors - cyan/teal only */
+  /* Sidebar colors */
   --sidebar-background: 194 100% 96%;
   --sidebar-foreground: 188 85% 20%;
-  --sidebar-primary: 188 100% 45%;
-  --sidebar-primary-foreground: 194 100% 98%;
+  --sidebar-primary: 194 100% 42%;
+  --sidebar-primary-foreground: 255 100% 100%;
   --sidebar-accent: 194 60% 92%;
   --sidebar-accent-foreground: 188 85% 15%;
   --sidebar-border: 194 40% 85%;
-  --sidebar-ring: 188 100% 45%;
+  --sidebar-ring: 194 100% 42%;
 }
 
 /* DARK MODE COMPLETELY REMOVED - LIGHT ONLY */
