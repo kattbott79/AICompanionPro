@@ -201,6 +201,95 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Mental Health Automation API Endpoints
+  app.post("/api/mental-health/process-notes", async (req, res) => {
+    try {
+      const { rawNotes, sessionType = "individual", provider = "hume" } = req.body;
+      
+      if (!rawNotes) {
+        return res.status(400).json({ error: "Raw notes are required" });
+      }
+
+      const mentalHealthAI = new MentalHealthAI(provider);
+      const processedNotes = await mentalHealthAI.processTherapyNotes(rawNotes, sessionType);
+      
+      res.json({
+        success: true,
+        processedNotes,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("Process notes error:", error);
+      res.status(500).json({ error: "Failed to process therapy notes" });
+    }
+  });
+
+  app.post("/api/mental-health/generate-cms1500", async (req, res) => {
+    try {
+      const { sessionData, clientData, providerData, aiProvider = "hume" } = req.body;
+      
+      if (!sessionData || !clientData || !providerData) {
+        return res.status(400).json({ error: "Session, client, and provider data are required" });
+      }
+
+      const mentalHealthAI = new MentalHealthAI(aiProvider);
+      const cms1500Data = await mentalHealthAI.generateCMS1500(sessionData, clientData, providerData);
+      
+      res.json({
+        success: true,
+        cms1500Data,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("CMS-1500 generation error:", error);
+      res.status(500).json({ error: "Failed to generate CMS-1500 form" });
+    }
+  });
+
+  app.post("/api/mental-health/analyze-rejection", async (req, res) => {
+    try {
+      const { rejectionCode, rejectionReason, originalClaim, provider = "hume" } = req.body;
+      
+      if (!rejectionCode || !rejectionReason || !originalClaim) {
+        return res.status(400).json({ error: "Rejection code, reason, and original claim data are required" });
+      }
+
+      const mentalHealthAI = new MentalHealthAI(provider);
+      const analysis = await mentalHealthAI.analyzeClaimRejection(rejectionCode, rejectionReason, originalClaim);
+      
+      res.json({
+        success: true,
+        analysis,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("Claim rejection analysis error:", error);
+      res.status(500).json({ error: "Failed to analyze claim rejection" });
+    }
+  });
+
+  app.post("/api/mental-health/validate-claim", async (req, res) => {
+    try {
+      const { claimData, provider = "hume" } = req.body;
+      
+      if (!claimData) {
+        return res.status(400).json({ error: "Claim data is required" });
+      }
+
+      const mentalHealthAI = new MentalHealthAI(provider);
+      const validation = await mentalHealthAI.validateClaim(claimData);
+      
+      res.json({
+        success: true,
+        validation,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("Claim validation error:", error);
+      res.status(500).json({ error: "Failed to validate claim" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
