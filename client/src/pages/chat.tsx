@@ -62,7 +62,7 @@ export default function Chat() {
               </div>
               <div>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h2>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by HUME AI</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by hume ai</p>
               </div>
             </div>
 
@@ -181,7 +181,7 @@ export default function Chat() {
               </div>
               <div>
                 <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h1>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by HUME AI</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by hume ai</p>
               </div>
             </div>
 
