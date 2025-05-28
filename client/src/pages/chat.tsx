@@ -51,12 +51,12 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-cyan-900 dark:via-blue-900 dark:to-teal-900 text-cyan-900 dark:text-cyan-100">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50 dark:from-gray-900 dark:via-purple-900 dark:to-pink-900 text-gray-900 dark:text-gray-100">
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-gradient-to-b from-blue-50/80 via-cyan-50/80 to-teal-50/80 dark:from-blue-900/40 dark:via-cyan-900/40 dark:to-teal-900/40 backdrop-blur-xl border-r border-blue-200/30 dark:border-blue-700/30 flex-col shadow-lg">
-          <div className="p-6 border-b border-blue-200/30 dark:border-blue-700/30">
+        <div className="hidden lg:flex w-80 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-r border-gray-200/50 dark:border-gray-700/50 flex-col shadow-lg">
+          <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
@@ -66,8 +66,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-cyan-900 dark:text-cyan-100">adopt.a.bot</h2>
-                <p className="text-xs text-blue-600 dark:text-blue-400">Powered by Hume AI</p>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h2>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -108,9 +108,9 @@ export default function Chat() {
 
             {/* Popular Templates Preview */}
             {!showTemplates && (
-              <Card className="bg-gradient-to-br from-white/90 via-purple-50/20 to-green-50/20 dark:bg-gradient-to-br dark:from-blue-800/50 dark:via-purple-900/20 dark:to-green-900/20 border-blue-200/30 dark:border-blue-700/30 shadow-lg">
+              <Card className="border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-4 text-cyan-900 dark:text-cyan-100">Popular Templates</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
                     <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 dark:bg-gradient-to-r dark:from-blue-900/50 dark:to-cyan-900/50 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 dark:hover:bg-gradient-to-r dark:hover:from-cyan-800/50 dark:hover:to-teal-800/50 transition-colors">
@@ -179,7 +179,7 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-blue-200/30 dark:border-blue-700/30 bg-gradient-to-r from-blue-50/80 via-cyan-50/80 to-teal-50/80 dark:from-blue-900/40 dark:via-cyan-900/40 dark:to-teal-900/40 backdrop-blur-sm shadow-lg">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm shadow-lg">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full overflow-hidden">
                 <img 
@@ -189,8 +189,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-cyan-900 dark:text-cyan-100">adopt.a.bot</h1>
-                <p className="text-xs text-blue-600 dark:text-blue-400">Powered by Hume AI</p>
+                <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h1>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
               </div>
             </div>
 
