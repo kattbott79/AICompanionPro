@@ -16,7 +16,7 @@ import {
   ExternalLink,
   Bot
 } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+
 import { Template } from "@/types/chat";
 import adoptABotLogo from "@assets/favicon.wordpress.png";
 import { useChat } from "@/hooks/useChat";
@@ -195,7 +195,6 @@ export default function Chat() {
             </div>
 
             <div className="flex items-center gap-2">
-              <ThemeToggle />
               <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="sm">
