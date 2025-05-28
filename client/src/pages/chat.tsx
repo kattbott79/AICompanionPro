@@ -113,7 +113,7 @@ export default function Chat() {
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 dark:bg-gradient-to-r dark:from-blue-900/50 dark:to-cyan-900/50 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 dark:hover:bg-gradient-to-r dark:hover:from-cyan-800/50 dark:hover:to-teal-800/50 transition-colors">
+                    <div className="p-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-lg border border-gray-200/50 dark:border-gray-700/50 cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="E-commerce automation" 
@@ -129,7 +129,7 @@ export default function Chat() {
                     </div>
 
                     {/* Service Business Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 dark:bg-gradient-to-r dark:from-blue-900/50 dark:to-cyan-900/50 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 dark:hover:bg-gradient-to-r dark:hover:from-cyan-800/50 dark:hover:to-teal-800/50 transition-colors">
+                    <div className="p-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-lg border border-gray-200/50 dark:border-gray-700/50 cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Service business automation" 
@@ -145,7 +145,7 @@ export default function Chat() {
                     </div>
 
                     {/* Personal Assistant Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 dark:bg-gradient-to-r dark:from-blue-900/50 dark:to-cyan-900/50 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 dark:hover:bg-gradient-to-r dark:hover:from-cyan-800/50 dark:hover:to-teal-800/50 transition-colors">
+                    <div className="p-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-lg border border-gray-200/50 dark:border-gray-700/50 cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Personal productivity automation" 
