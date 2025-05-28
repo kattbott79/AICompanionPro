@@ -50,19 +50,19 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-gray-900 dark:text-gray-100">
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-slate-800/50 backdrop-blur-xl border-r border-gray-700/50 flex-col">
-          <div className="p-6 border-b border-gray-700/50">
+        <div className="hidden lg:flex w-80 bg-white/90 dark:bg-slate-800/50 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 flex-col">
+          <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
                 <Bot className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-100">AI Consultant</h2>
-                <p className="text-xs text-gray-400">Automation Helper</p>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h2>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -103,12 +103,12 @@ export default function Chat() {
 
             {/* Popular Templates Preview */}
             {!showTemplates && (
-              <Card className="bg-gray-800/50 border-gray-700/50">
+              <Card className="bg-white/80 dark:bg-gray-800/50 border-gray-200/50 dark:border-gray-700/50">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-4 text-gray-200">Popular Templates</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-200">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
-                    <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-colors">
+                    <div className="p-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg border border-gray-300/50 dark:border-gray-700/50 cursor-pointer hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="E-commerce automation" 
