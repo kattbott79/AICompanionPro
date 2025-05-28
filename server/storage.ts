@@ -240,6 +240,316 @@ export class MemStorage implements IStorage {
           features: ["Automated Scheduling", "Documentation Assistance", "Billing Automation", "Client Portal Integration"]
         },
         isActive: true
+      },
+      {
+        id: 13,
+        name: "Group Therapy Session Manager",
+        category: "healthcare",
+        subcategory: "group-therapy",
+        description: "Automated attendance tracking, group dynamics analysis, and individual progress notes for group sessions",
+        icon: "fas fa-users",
+        color: "blue",
+        timesSaved: "6 hours/week",
+        rating: 5,
+        userCount: 78,
+        configuration: {
+          integrations: ["Any EMR", "Video Conferencing", "Attendance Systems"],
+          features: ["Group Attendance", "Individual Tracking", "Dynamics Analysis", "Outcome Measurement"]
+        },
+        isActive: true
+      },
+      {
+        id: 14,
+        name: "Crisis Intervention Workflow",
+        category: "healthcare",
+        subcategory: "crisis-management",
+        description: "Automated risk assessment, safety planning, and emergency contact protocols with real-time documentation",
+        icon: "fas fa-exclamation-triangle",
+        color: "red",
+        timesSaved: "Critical time savings",
+        rating: 5,
+        userCount: 45,
+        configuration: {
+          integrations: ["Emergency Systems", "Contact Management", "EMR", "Mobile Apps"],
+          features: ["Risk Assessment", "Safety Planning", "Emergency Contacts", "Documentation"]
+        },
+        isActive: true
+      },
+      {
+        id: 15,
+        name: "Telehealth Session Automation",
+        category: "healthcare",
+        subcategory: "telehealth",
+        description: "Complete telehealth workflow with automated scheduling, session recording transcription, and HIPAA-compliant note generation",
+        icon: "fas fa-video",
+        color: "teal",
+        timesSaved: "10 hours/week",
+        rating: 5,
+        userCount: 234,
+        configuration: {
+          integrations: ["Zoom", "Teams", "Doxy.me", "Any Video Platform"],
+          features: ["Auto Scheduling", "Transcription", "SOAP Notes", "Session Analytics"]
+        },
+        isActive: true
+      },
+      {
+        id: 16,
+        name: "Treatment Plan Generator",
+        category: "healthcare",
+        subcategory: "treatment-planning",
+        description: "AI-powered treatment plan creation based on assessments, with goal tracking and outcome measurement",
+        icon: "fas fa-clipboard-list",
+        color: "orange",
+        timesSaved: "5 hours/week",
+        rating: 5,
+        userCount: 167,
+        configuration: {
+          integrations: ["Assessment Tools", "EMR", "Outcome Measures"],
+          features: ["Plan Generation", "Goal Tracking", "Progress Monitoring", "Outcome Analysis"]
+        },
+        isActive: true
+      },
+      {
+        id: 17,
+        name: "Insurance Authorization Assistant",
+        category: "healthcare",
+        subcategory: "insurance",
+        description: "Automated prior authorization requests, benefit verification, and appeals management with AI-powered documentation",
+        icon: "fas fa-shield-alt",
+        color: "cyan",
+        timesSaved: "15 hours/week",
+        rating: 5,
+        userCount: 112,
+        configuration: {
+          integrations: ["Payer Portals", "Clearinghouses", "EMR"],
+          features: ["Prior Auth", "Benefit Verification", "Appeals", "Documentation"]
+        },
+        isActive: true
+      },
+      {
+        id: 18,
+        name: "Patient Communication Hub",
+        category: "healthcare",
+        subcategory: "patient-engagement",
+        description: "Automated appointment reminders, treatment progress updates, and personalized mental health resources",
+        icon: "fas fa-comments",
+        color: "pink",
+        timesSaved: "8 hours/week",
+        rating: 5,
+        userCount: 298,
+        configuration: {
+          integrations: ["SMS", "Email", "Patient Portals", "Apps"],
+          features: ["Reminders", "Progress Updates", "Resources", "Check-ins"]
+        },
+        isActive: true
+      },
+      {
+        id: 19,
+        name: "Outcome Measurement Tracker",
+        category: "healthcare",
+        subcategory: "outcomes",
+        description: "Automated administration and analysis of standardized assessments like PHQ-9, GAD-7, and custom measures",
+        icon: "fas fa-chart-line",
+        color: "emerald",
+        timesSaved: "4 hours/week",
+        rating: 5,
+        userCount: 89,
+        configuration: {
+          integrations: ["Assessment Platforms", "EMR", "Analytics Tools"],
+          features: ["Assessment Admin", "Score Tracking", "Trend Analysis", "Reports"]
+        },
+        isActive: true
+      },
+      {
+        id: 20,
+        name: "Multi-Provider Practice Coordinator",
+        category: "healthcare",
+        subcategory: "practice-management",
+        description: "Coordinate care across multiple providers, manage referrals, and track collaborative treatment plans",
+        icon: "fas fa-network-wired",
+        color: "violet",
+        timesSaved: "12 hours/week",
+        rating: 5,
+        userCount: 67,
+        configuration: {
+          integrations: ["Multiple EMRs", "Communication Systems", "Referral Networks"],
+          features: ["Care Coordination", "Referral Management", "Provider Communication", "Unified Documentation"]
+        },
+        isActive: true
+      }
+    );
+
+    // High-Demand Specialized Templates
+    defaultTemplates.push(
+      {
+        id: 21,
+        name: "Sports Betting Intelligence Assistant",
+        category: "entertainment",
+        subcategory: "sports-analytics",
+        description: "Real-time sports data analysis, player stats tracking, and smart betting recommendations with risk management",
+        icon: "fas fa-football-ball",
+        color: "amber",
+        timesSaved: "10+ hours/week research",
+        rating: 5,
+        userCount: 2340,
+        configuration: {
+          integrations: ["ESPN API", "Sports Data APIs", "Betting Platforms", "News Feeds"],
+          features: ["Live Stats", "Player Analysis", "Betting Odds", "Risk Calculator", "Trend Analysis"]
+        },
+        isActive: true
+      },
+      {
+        id: 22,
+        name: "Real Estate Investment Analyzer",
+        category: "business",
+        subcategory: "real-estate",
+        description: "Automated property analysis, market trends, rental yield calculations, and investment opportunity alerts",
+        icon: "fas fa-home",
+        color: "green",
+        timesSaved: "15 hours/week",
+        rating: 5,
+        userCount: 1560,
+        configuration: {
+          integrations: ["MLS", "Zillow API", "Market Data", "Property Records"],
+          features: ["Property Analysis", "Market Trends", "ROI Calculator", "Deal Alerts"]
+        },
+        isActive: true
+      },
+      {
+        id: 23,
+        name: "Social Media Influencer Manager",
+        category: "business",
+        subcategory: "content-creation",
+        description: "Content scheduling, engagement analysis, brand partnership tracking, and audience growth automation",
+        icon: "fas fa-users",
+        color: "purple",
+        timesSaved: "20 hours/week",
+        rating: 5,
+        userCount: 3450,
+        configuration: {
+          integrations: ["Instagram", "TikTok", "YouTube", "Twitter", "Analytics Tools"],
+          features: ["Content Scheduling", "Engagement Tracking", "Brand Deals", "Growth Analytics"]
+        },
+        isActive: true
+      },
+      {
+        id: 24,
+        name: "Cryptocurrency Trading Bot",
+        category: "finance",
+        subcategory: "crypto-trading",
+        description: "Automated crypto trading with technical analysis, portfolio rebalancing, and risk management protocols",
+        icon: "fas fa-coins",
+        color: "yellow",
+        timesSaved: "24/7 monitoring",
+        rating: 5,
+        userCount: 890,
+        configuration: {
+          integrations: ["Binance", "Coinbase", "Trading APIs", "Market Data"],
+          features: ["Auto Trading", "Technical Analysis", "Risk Management", "Portfolio Tracking"]
+        },
+        isActive: true
+      },
+      {
+        id: 25,
+        name: "Dropshipping Business Automator",
+        category: "business",
+        subcategory: "e-commerce",
+        description: "Product research, supplier management, order processing, and customer service automation for dropshipping",
+        icon: "fas fa-shipping-fast",
+        color: "blue",
+        timesSaved: "25 hours/week",
+        rating: 5,
+        userCount: 2100,
+        configuration: {
+          integrations: ["AliExpress", "Shopify", "Amazon", "Supplier APIs"],
+          features: ["Product Research", "Order Automation", "Supplier Management", "Customer Service"]
+        },
+        isActive: true
+      },
+      {
+        id: 26,
+        name: "Legal Document Assistant",
+        category: "business",
+        subcategory: "legal",
+        description: "Automated contract generation, legal research, case management, and compliance tracking for legal professionals",
+        icon: "fas fa-gavel",
+        color: "indigo",
+        timesSaved: "12 hours/week",
+        rating: 5,
+        userCount: 670,
+        configuration: {
+          integrations: ["Legal Databases", "Document Templates", "Case Management"],
+          features: ["Contract Generation", "Legal Research", "Case Tracking", "Compliance Alerts"]
+        },
+        isActive: true
+      },
+      {
+        id: 27,
+        name: "YouTube Channel Growth Engine",
+        category: "business",
+        subcategory: "content-creation",
+        description: "Video SEO optimization, thumbnail testing, audience analytics, and monetization strategy automation",
+        icon: "fab fa-youtube",
+        color: "red",
+        timesSaved: "18 hours/week",
+        rating: 5,
+        userCount: 1890,
+        configuration: {
+          integrations: ["YouTube API", "Analytics Tools", "Thumbnail Generators", "SEO Tools"],
+          features: ["SEO Optimization", "Thumbnail Testing", "Analytics", "Monetization Tracking"]
+        },
+        isActive: true
+      },
+      {
+        id: 28,
+        name: "Restaurant Operations Manager",
+        category: "business",
+        subcategory: "hospitality",
+        description: "Inventory management, staff scheduling, customer feedback analysis, and delivery optimization",
+        icon: "fas fa-utensils",
+        color: "orange",
+        timesSaved: "22 hours/week",
+        rating: 5,
+        userCount: 540,
+        configuration: {
+          integrations: ["POS Systems", "Delivery Apps", "Inventory Software", "Scheduling Tools"],
+          features: ["Inventory Tracking", "Staff Scheduling", "Feedback Analysis", "Delivery Optimization"]
+        },
+        isActive: true
+      },
+      {
+        id: 29,
+        name: "Dating Profile Optimizer",
+        category: "personal",
+        subcategory: "relationships",
+        description: "AI-powered dating profile optimization, conversation starters, and match analysis for dating apps",
+        icon: "fas fa-heart",
+        color: "pink",
+        timesSaved: "5 hours/week",
+        rating: 5,
+        userCount: 4230,
+        configuration: {
+          integrations: ["Tinder", "Bumble", "Hinge", "Photo Analysis Tools"],
+          features: ["Profile Optimization", "Photo Selection", "Conversation Starters", "Match Analysis"]
+        },
+        isActive: true
+      },
+      {
+        id: 30,
+        name: "Freelancer Business Manager",
+        category: "business",
+        subcategory: "freelancing",
+        description: "Client management, project tracking, invoice automation, and skill development recommendations",
+        icon: "fas fa-laptop",
+        color: "teal",
+        timesSaved: "16 hours/week",
+        rating: 5,
+        userCount: 2890,
+        configuration: {
+          integrations: ["Upwork", "Fiverr", "PayPal", "Project Management Tools"],
+          features: ["Client Management", "Project Tracking", "Invoice Automation", "Skill Development"]
+        },
+        isActive: true
       }
     );
 
