@@ -3,47 +3,86 @@
 @tailwind utilities;
 
 :root {
-  /* EXACT TAILWIND COLORS: cyan-50 #ecfeff, blue-50 #eff6ff, teal-50 #f0fdfa */
-  --background: 186 100% 97%; /* cyan-50 #ecfeff */
-  --foreground: 222 84% 5%; /* slate-900 text */
-  --muted: 215 28% 97%; /* blue-50 #eff6ff */
-  --muted-foreground: 215 16% 47%; /* slate-600 */
-  --popover: 186 100% 97%; /* cyan-50 */
-  --popover-foreground: 222 84% 5%; /* slate-900 */
-  --card: 0 0% 100%; /* pure white bg-white */
-  --card-foreground: 222 84% 5%; /* slate-900 */
-  --border: 214 32% 91%; /* slate-200 */
-  --input: 214 32% 91%; /* slate-200 */
-  --primary: 199 89% 48%; /* cyan-600 #0891b2 */
-  --primary-foreground: 210 40% 98%; /* slate-50 */
-  --secondary: 210 40% 96%; /* slate-100 */
-  --secondary-foreground: 222 84% 5%; /* slate-900 */
-  --accent: 217 91% 60%; /* blue-600 #2563eb */
-  --accent-foreground: 210 40% 98%; /* slate-50 */
+  /* Beautiful Emotional AI - Pure Blue/Cyan/Teal Theme */
+  --background: 195 100% 98%; /* Light cyan-blue background */
+  --foreground: 195 100% 15%; /* Deep cyan text */
+  --muted: 190 60% 92%; /* Light blue muted */
+  --muted-foreground: 195 80% 25%; /* Cyan muted text */
+  --popover: 195 100% 98%; /* Light cyan popover */
+  --popover-foreground: 195 100% 15%; /* Deep cyan popover text */
+  --card: 195 100% 98%; /* Light cyan card */
+  --card-foreground: 195 100% 15%; /* Deep cyan card text */
+  --border: 190 40% 80%; /* Light blue border */
+  --input: 190 40% 85%; /* Light blue input */
+  --primary: 195 100% 50%; /* Bright cyan primary */
+  --primary-foreground: 195 100% 98%; /* Light cyan on primary */
+  --secondary: 160 60% 45%; /* Calming teal secondary */
+  --secondary-foreground: 195 100% 15%; /* Deep cyan on secondary */
+  --accent: 270 95% 60%; /* Purple accent for visual interest */
+  --accent-foreground: 195 100% 98%; /* Light cyan on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 199 89% 48%; /* cyan-600 */
+  --destructive-foreground: 195 100% 98%;
+  --ring: 195 100% 50%;
   --radius: 0.75rem;
   
-  /* Chart colors matching integrations */
-  --chart-1: 199 89% 48%; /* cyan-600 */
-  --chart-2: 217 91% 60%; /* blue-600 */
-  --chart-3: 173 58% 39%; /* teal-600 */
-  --chart-4: 188 94% 68%; /* cyan-400 */
-  --chart-5: 213 94% 68%; /* blue-400 */
+  /* Chart colors */
+  --chart-1: 207 90% 54%;
+  --chart-2: 142 76% 36%;
+  --chart-3: 45 93% 47%;
+  --chart-4: 280 87% 47%;
+  --chart-5: 14 91% 54%;
   
   /* Sidebar colors */
-  --sidebar-background: 186 100% 97%;
-  --sidebar-foreground: 222 84% 5%;
-  --sidebar-primary: 199 89% 48%;
-  --sidebar-primary-foreground: 210 40% 98%;
-  --sidebar-accent: 210 40% 96%;
-  --sidebar-accent-foreground: 222 84% 5%;
-  --sidebar-border: 214 32% 91%;
-  --sidebar-ring: 199 89% 48%;
+  --sidebar-background: 195 100% 96%;
+  --sidebar-foreground: 195 100% 20%;
+  --sidebar-primary: 195 100% 50%;
+  --sidebar-primary-foreground: 195 100% 98%;
+  --sidebar-accent: 190 60% 92%;
+  --sidebar-accent-foreground: 195 100% 15%;
+  --sidebar-border: 190 40% 85%;
+  --sidebar-ring: 195 100% 50%;
 }
 
-/* DARK MODE COMPLETELY REMOVED - LIGHT ONLY */
+.dark {
+  /* Beautiful Dark Emotional AI - Pure Blue/Cyan/Teal Theme */
+  --background: 195 80% 8%; /* Deep cyan-blue background */
+  --foreground: 195 100% 85%; /* Light cyan text */
+  --muted: 190 60% 15%; /* Dark blue muted */
+  --muted-foreground: 195 60% 70%; /* Light cyan muted text */
+  --popover: 195 80% 10%; /* Deep cyan popover */
+  --popover-foreground: 195 100% 85%; /* Light cyan popover text */
+  --card: 195 80% 10%; /* Deep cyan card */
+  --card-foreground: 195 100% 85%; /* Light cyan card text */
+  --border: 190 40% 25%; /* Dark blue border */
+  --input: 190 40% 20%; /* Dark blue input */
+  --primary: 195 100% 60%; /* Bright cyan primary */
+  --primary-foreground: 195 80% 8%; /* Deep cyan on primary */
+  --secondary: 160 70% 35%; /* Deep teal secondary */
+  --secondary-foreground: 195 100% 85%; /* Light cyan on secondary */
+  --accent: 270 95% 65%; /* Purple accent for visual interest */
+  --accent-foreground: 195 80% 8%; /* Deep cyan on accent */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 195 100% 98%;
+  --ring: 195 100% 60%;
+  --radius: 0.75rem;
+  
+  /* Chart colors for dark theme */
+  --chart-1: 207 90% 54%; /* Blue */
+  --chart-2: 142 76% 46%; /* Green */
+  --chart-3: 45 93% 57%; /* Yellow */
+  --chart-4: 280 87% 57%; /* Purple */
+  --chart-5: 14 91% 64%; /* Orange */
+  
+  /* Sidebar colors for dark theme */
+  --sidebar-background: 195 60% 12%;
+  --sidebar-foreground: 195 100% 85%;
+  --sidebar-primary: 195 100% 60%;
+  --sidebar-primary-foreground: 195 80% 8%;
+  --sidebar-accent: 190 40% 18%;
+  --sidebar-accent-foreground: 195 100% 85%;
+  --sidebar-border: 190 40% 22%;
+  --sidebar-ring: 195 100% 60%;
+}
 
 @layer base {
   * {
@@ -58,7 +97,10 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Light mode only - clean cyan-teal theme */
+  /* Set dark mode by default for the AI consultant app */
+  html {
+    @apply dark;
+  }
 }
 
 @layer components {
