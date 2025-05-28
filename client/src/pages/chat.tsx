@@ -16,6 +16,7 @@ import {
   ExternalLink,
   Bot
 } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Template } from "@/types/chat";
 import { useChat } from "@/hooks/useChat";
 import { cn } from "@/lib/utils";
@@ -184,33 +185,36 @@ export default function Chat() {
               </div>
             </div>
 
-            <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="sm">
-                  <Menu className="w-5 h-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80 bg-slate-800 border-gray-700">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-lg font-semibold text-gray-200">Options</h2>
-                  <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)}>
-                    <X className="w-4 h-4" />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="sm">
+                    <Menu className="w-5 h-5" />
                   </Button>
-                </div>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-80 bg-slate-800 border-gray-700">
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-lg font-semibold text-gray-200">Options</h2>
+                    <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)}>
+                      <X className="w-4 h-4" />
+                    </Button>
+                  </div>
 
-                <ScrollArea className="h-full space-y-6">
-                  <ProgressIndicator
-                    currentStep={currentStep}
-                    selectedTemplate={selectedTemplate}
-                  />
+                  <ScrollArea className="h-full space-y-6">
+                    <ProgressIndicator
+                      currentStep={currentStep}
+                      selectedTemplate={selectedTemplate}
+                    />
 
-                  <ProviderSelector
-                    selectedProvider={selectedProvider}
-                    onProviderChange={handleProviderChange}
-                  />
-                </ScrollArea>
-              </SheetContent>
-            </Sheet>
+                    <ProviderSelector
+                      selectedProvider={selectedProvider}
+                      onProviderChange={handleProviderChange}
+                    />
+                  </ScrollArea>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
 
           {/* Chat Interface or Template Grid */}
