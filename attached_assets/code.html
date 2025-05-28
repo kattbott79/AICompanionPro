@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Consent</title>
+<style>
+  .cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  .cookie-consent button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+  }
+
+  .cookie-consent button:hover {
+    background-color: #0056b3;
+  }
+    .cookie-consent-text {
+        text-align: left; /* Align the text to the left */
+        flex-grow: 1;  /* Make the text area expandable */
+    }
+</style>
+</head>
+<body>
+
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-consent-text">
+      <p>This website uses cookies to enhance your browsing experience. By continuing to use this website, you agree to our use of cookies.</p>
+      <ul>
+        <li><strong>Essential Cookies:</strong> These cookies are necessary for the website to function. (e.g., session management)</li>
+        <li><strong>Analytics Cookies:</strong> We use Google Analytics (or other analytics service - specify) to collect anonymous website usage data. (Provide link to Google Analytics privacy policy/other service)</li>
+        <li><strong>Marketing Cookies:</strong> We use marketing cookies from [list services/ad providers] to personalize ads and track your online behaviour. (Provide link to ad provider privacy policy)</li>
+      </ul>
+      <p>For more detailed information on our Cookie Policy, <a href="your-cookie-policy-page.html">click here.</a></p>
+
+      <!-- Added for stricter compliance -->
+      <p><small>(You can adjust your cookie preferences below. However, essential cookies are required for website functionality.)</small></p>
+    </div>
+
+    <button id="acceptCookies">Accept All</button>
+    <button id="manageCookies">Manage Preferences</button>
+  </div>
+
+
+  <script>
+    const acceptButton = document.getElementById('acceptCookies');
+    const manageButton = document.getElementById('manageCookies');
+    const consentBanner = document.getElementById('cookieConsent');
+
+    // Placeholder for cookie management UI (replace with actual implementation)
+    const manageCookieModal = () => {
+        // Implement your modal or settings area here
+        console.log("Cookie management modal would be implemented here.");
+      // This should be a modal or section where you allow users to change/opt out of specific categories of cookies.
+        consentBanner.style.display = 'none';
+    }
+    
+
+    acceptButton.addEventListener('click', () => {
+      // Set cookies (essential and others you've determined to use). This is crucial.
+      // ... Your cookie setting logic here ...
+      consentBanner.style.display = 'none';
+    });
+    manageButton.addEventListener('click', manageCookieModal);
+  </script>
+</body>
+</html>
