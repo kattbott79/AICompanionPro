@@ -114,9 +114,9 @@ export default function Chat() {
                         alt="E-commerce automation" 
                         className="w-full h-16 object-cover rounded mb-2" 
                       />
-                      <h4 className="font-medium text-blue-400 text-sm mb-1">E-commerce Automation</h4>
-                      <p className="text-xs text-gray-400">Order processing, inventory alerts, customer follow-ups</p>
-                      <div className="flex items-center mt-2 text-xs text-gray-500">
+                      <h4 className="font-medium text-cyan-600 dark:text-blue-400 text-sm mb-1">E-commerce Automation</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">Order processing, inventory alerts, customer follow-ups</p>
+                      <div className="flex items-center mt-2 text-xs text-gray-500 dark:text-gray-500">
                         <span>★ 4.8</span>
                         <span className="mx-2">•</span>
                         <span>1.2k users</span>
@@ -262,7 +262,7 @@ export default function Chat() {
           <Button
             size="lg"
             onClick={() => setShowTemplates(true)}
-            className="rounded-full w-14 h-14 shadow-lg bg-gradient-to-br from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+            className="rounded-full w-14 h-14 shadow-lg bg-gradient-to-br from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
           >
             <Sparkles className="w-6 h-6" />
           </Button>
