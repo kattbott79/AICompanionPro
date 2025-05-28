@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Template } from "@/types/chat";
+import adoptABotLogo from "@assets/favicon.wordpress.png";
 import { useChat } from "@/hooks/useChat";
 import { cn } from "@/lib/utils";
 
@@ -54,12 +55,12 @@ export default function Chat() {
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-white/90 dark:bg-slate-800/50 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 flex-col">
-          <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
+        <div className="hidden lg:flex w-80 bg-white/80 dark:bg-blue-900/30 backdrop-blur-xl border-r border-cyan-200/30 dark:border-cyan-700/30 flex-col">
+          <div className="p-6 border-b border-cyan-200/30 dark:border-cyan-700/30">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
-                  src="@assets/favicon.wordpress.png" 
+                  src={adoptABotLogo} 
                   alt="adopt.a.bot logo" 
                   className="w-full h-full object-cover"
                 />
@@ -178,11 +179,11 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 dark:border-gray-700/50 bg-white/90 dark:bg-gray-800/50 backdrop-blur-sm">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-cyan-200/30 dark:border-cyan-700/30 bg-white/80 dark:bg-blue-900/30 backdrop-blur-sm">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full overflow-hidden">
                 <img 
-                  src="@assets/favicon.wordpress.png" 
+                  src={adoptABotLogo} 
                   alt="adopt.a.bot logo" 
                   className="w-full h-full object-cover"
                 />
