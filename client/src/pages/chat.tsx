@@ -51,7 +51,7 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-cyan-900 dark:via-blue-900 dark:to-teal-900 text-cyan-900 dark:text-cyan-100">
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
@@ -66,8 +66,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h2>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
+                <h2 className="text-lg font-bold text-cyan-900 dark:text-cyan-100">adopt.a.bot</h2>
+                <p className="text-xs text-blue-600 dark:text-blue-400">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -108,20 +108,20 @@ export default function Chat() {
 
             {/* Popular Templates Preview */}
             {!showTemplates && (
-              <Card className="bg-gradient-to-br from-white/90 via-purple-50/20 to-green-50/20 dark:bg-gradient-to-br dark:from-gray-800/50 dark:via-purple-900/20 dark:to-green-900/20 border-blue-200/30 dark:border-blue-700/30 shadow-lg">
+              <Card className="bg-gradient-to-br from-white/90 via-purple-50/20 to-green-50/20 dark:bg-gradient-to-br dark:from-blue-800/50 dark:via-purple-900/20 dark:to-green-900/20 border-blue-200/30 dark:border-blue-700/30 shadow-lg">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-200">Popular Templates</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-cyan-900 dark:text-cyan-100">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
-                    <div className="p-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg border border-gray-300/50 dark:border-gray-700/50 cursor-pointer hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition-colors">
+                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 dark:bg-gradient-to-r dark:from-blue-900/50 dark:to-cyan-900/50 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 dark:hover:bg-gradient-to-r dark:hover:from-cyan-800/50 dark:hover:to-teal-800/50 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="E-commerce automation" 
                         className="w-full h-16 object-cover rounded mb-2" 
                       />
                       <h4 className="font-medium text-cyan-600 dark:text-blue-400 text-sm mb-1">E-commerce Automation</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">Order processing, inventory alerts, customer follow-ups</p>
-                      <div className="flex items-center mt-2 text-xs text-gray-500 dark:text-gray-500">
+                      <p className="text-xs text-blue-600 dark:text-blue-400">Order processing, inventory alerts, customer follow-ups</p>
+                      <div className="flex items-center mt-2 text-xs text-cyan-500 dark:text-cyan-400">
                         <span>★ 4.8</span>
                         <span className="mx-2">•</span>
                         <span>1.2k users</span>
@@ -129,7 +129,7 @@ export default function Chat() {
                     </div>
 
                     {/* Service Business Template Preview */}
-                    <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-colors">
+                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 dark:bg-gradient-to-r dark:from-blue-900/50 dark:to-cyan-900/50 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 dark:hover:bg-gradient-to-r dark:hover:from-cyan-800/50 dark:hover:to-teal-800/50 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Service business automation" 
@@ -189,8 +189,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h1>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
+                <h1 className="text-lg font-bold text-cyan-900 dark:text-cyan-100">adopt.a.bot</h1>
+                <p className="text-xs text-blue-600 dark:text-blue-400">Powered by Hume AI</p>
               </div>
             </div>
 
