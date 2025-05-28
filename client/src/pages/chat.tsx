@@ -61,8 +61,8 @@ export default function Chat() {
                 <Bot className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h2>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by hume ai</p>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h2>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -180,8 +180,8 @@ export default function Chat() {
                 <Bot className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h1>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by hume ai</p>
+                <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h1>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
               </div>
             </div>
 
