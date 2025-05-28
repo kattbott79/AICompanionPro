@@ -16,7 +16,7 @@ export const MultipleSelector = ({ options, onSelect, buttonText }) => {
 
   return (
     <div className="mt-2">
-      <div className="mb-2 text-sm text-gray-600">Select all that apply:</div>
+      <div className="mb-2 text-lrg text-green-500">Select all that apply:</div>
       <div className="space-y-2">
         {options.map((option, index) => (
           <div key={index} className="flex items-center">
@@ -46,7 +46,7 @@ export const ChatBubble = ({ message, isUser }) => {
   if (isUser) {
     return (
       <div className="flex justify-end mb-4">
-        <div className="bg-indigo-500 text-white rounded-lg py-2 px-4 max-w-md">
+        <div className="bg-indigo-500 text-white rounded-lg py-2 px-4">
           {message}
         </div>
       </div>
@@ -78,7 +78,7 @@ export const OptionButton = ({ option, onClick }) => {
 export const SectionCard = ({ title, icon, children }) => {
   return (
     <div className="border rounded-lg overflow-hidden mb-4">
-      <div className="bg-gray-50 p-3 border-b">
+      <div className="bg-blue-45 p-3 border-b">
         <h3 className="font-medium flex items-center">
           {icon}
           {title}
