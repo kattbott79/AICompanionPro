@@ -55,7 +55,7 @@ export default function Integrations() {
       description: "Send emotionally-aware messages and detect team mood patterns",
       provider: "slack",
       iconUrl: "/api/placeholder/40/40",
-      color: "bg-gradient-to-r from-purple-500 to-pink-500",
+      color: "bg-gradient-to-r from-blue-500 to-cyan-500",
       isConnected: true,
       emotionalTriggers: {
         supportedEmotions: ["joy", "stress", "excitement", "frustration"],
@@ -137,7 +137,7 @@ export default function Integrations() {
       description: "Create posts that resonate with your emotional brand voice",
       provider: "instagram",
       iconUrl: "/api/placeholder/40/40",
-      color: "bg-gradient-to-r from-pink-500 to-purple-500",
+      color: "bg-gradient-to-r from-teal-500 to-blue-500",
       isConnected: false,
       emotionalTriggers: {
         supportedEmotions: ["joy", "inspiration", "creativity", "confidence"],
@@ -201,7 +201,7 @@ export default function Integrations() {
       description: "Create viral content that resonates emotionally with audiences",
       provider: "tiktok",
       iconUrl: "/api/placeholder/40/40",
-      color: "bg-gradient-to-r from-pink-400 to-red-500",
+      color: "bg-gradient-to-r from-cyan-400 to-blue-500",
       isConnected: false,
       emotionalTriggers: {
         supportedEmotions: ["entertainment", "creativity", "viral", "trending"],
@@ -820,7 +820,7 @@ export default function Integrations() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-4">
             Integration Marketplace
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -847,7 +847,7 @@ export default function Integrations() {
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="flex items-center gap-1 text-xs lg:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white"
+                  className="flex items-center gap-1 text-xs lg:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-600 data-[state=active]:to-blue-600 data-[state=active]:text-white"
                 >
                   <category.icon className="w-3 h-3 lg:w-4 lg:h-4" />
                   <span className="hidden md:inline">{category.name}</span>

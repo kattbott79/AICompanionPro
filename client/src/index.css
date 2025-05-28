@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Emotional AI Vibe - Vibrant and alive colors */
-  --background: 220 26% 97%; /* Soft warm white */
-  --foreground: 225 71% 12%; /* Deep emotional blue */
-  --muted: 220 20% 95%;
-  --muted-foreground: 220 13% 46%;
-  --popover: 220 26% 97%;
-  --popover-foreground: 225 71% 12%;
-  --card: 220 26% 97%;
-  --card-foreground: 225 71% 12%;
-  --border: 220 13% 87%;
-  --input: 220 13% 87%;
-  --primary: 262 83% 58%; /* Vibrant purple for emotional connection */
+  /* Gender-neutral Emotional AI Vibe - Modern and inclusive */
+  --background: 210 20% 98%; /* Clean neutral white */
+  --foreground: 215 25% 27%; /* Sophisticated dark blue-gray */
+  --muted: 210 20% 95%;
+  --muted-foreground: 215 16% 47%;
+  --popover: 210 20% 98%;
+  --popover-foreground: 215 25% 27%;
+  --card: 210 20% 98%;
+  --card-foreground: 215 25% 27%;
+  --border: 210 20% 87%;
+  --input: 210 20% 87%;
+  --primary: 195 100% 50%; /* Modern cyan-blue for clarity */
   --primary-foreground: 210 40% 98%;
-  --secondary: 315 71% 85%; /* Soft pink for warmth */
-  --secondary-foreground: 225 71% 12%;
-  --accent: 52 98% 76%; /* Energetic yellow for excitement */
-  --accent-foreground: 225 71% 12%;
+  --secondary: 160 60% 45%; /* Calming teal for balance */
+  --secondary-foreground: 215 25% 27%;
+  --accent: 45 90% 60%; /* Warm amber for energy */
+  --accent-foreground: 215 25% 27%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  --ring: 262 83% 58%;
+  --ring: 195 100% 50%;
   --radius: 0.75rem;
   
   /* Chart colors */
@@ -44,23 +44,23 @@
 }
 
 .dark {
-  /* Dark Emotional AI Vibe - Deep, rich, and vibrant */
-  --background: 240 15% 6%; /* Deep emotional dark */
-  --foreground: 300 20% 95%; /* Soft light text */
-  --muted: 240 12% 12%;
-  --muted-foreground: 300 8% 70%;
-  --popover: 240 15% 8%;
-  --popover-foreground: 300 20% 95%;
-  --card: 240 15% 8%;
-  --card-foreground: 300 20% 95%;
-  --border: 240 12% 20%;
-  --input: 240 12% 20%;
-  --primary: 280 100% 70%; /* Bright emotional purple */
-  --primary-foreground: 240 15% 6%;
-  --secondary: 320 60% 25%; /* Deep pink accent */
-  --secondary-foreground: 300 20% 95%;
-  --accent: 45 100% 60%; /* Vibrant yellow for energy */
-  --accent-foreground: 240 15% 6%;
+  /* Gender-neutral Dark Theme - Professional and inclusive */
+  --background: 215 20% 7%; /* Deep neutral dark */
+  --foreground: 210 15% 93%; /* Clean light text */
+  --muted: 215 20% 12%;
+  --muted-foreground: 210 15% 70%;
+  --popover: 215 20% 8%;
+  --popover-foreground: 210 15% 93%;
+  --card: 215 20% 8%;
+  --card-foreground: 210 15% 93%;
+  --border: 215 20% 20%;
+  --input: 215 20% 20%;
+  --primary: 195 100% 60%; /* Bright modern cyan */
+  --primary-foreground: 215 20% 7%;
+  --secondary: 160 70% 35%; /* Deep calming teal */
+  --secondary-foreground: 210 15% 93%;
+  --accent: 45 90% 65%; /* Warm professional amber */
+  --accent-foreground: 215 20% 7%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   --ring: 207 90% 54%;
