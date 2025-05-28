@@ -44,24 +44,24 @@
 }
 
 .dark {
-  /* Dark theme colors optimized for the AI consultant app */
-  --background: 222 84% 4.9%; /* #0f172a */
-  --foreground: 210 40% 98%;
-  --muted: 217 33% 15%; /* #1e293b */
-  --muted-foreground: 215 20% 65%;
-  --popover: 222 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --card: 217 33% 15%; /* #1e293b with transparency */
-  --card-foreground: 210 40% 98%;
-  --border: 217 33% 23%; /* Lighter border for better contrast */
-  --input: 217 33% 23%;
-  --primary: 207 90% 54%; /* Keep blue primary */
-  --primary-foreground: 210 40% 98%;
-  --secondary: 217 33% 15%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 217 33% 15%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62% 50%;
+  /* Dark Emotional AI Vibe - Deep, rich, and vibrant */
+  --background: 240 15% 6%; /* Deep emotional dark */
+  --foreground: 300 20% 95%; /* Soft light text */
+  --muted: 240 12% 12%;
+  --muted-foreground: 300 8% 70%;
+  --popover: 240 15% 8%;
+  --popover-foreground: 300 20% 95%;
+  --card: 240 15% 8%;
+  --card-foreground: 300 20% 95%;
+  --border: 240 12% 20%;
+  --input: 240 12% 20%;
+  --primary: 280 100% 70%; /* Bright emotional purple */
+  --primary-foreground: 240 15% 6%;
+  --secondary: 320 60% 25%; /* Deep pink accent */
+  --secondary-foreground: 300 20% 95%;
+  --accent: 45 100% 60%; /* Vibrant yellow for energy */
+  --accent-foreground: 240 15% 6%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   --ring: 207 90% 54%;
   --radius: 0.75rem;
