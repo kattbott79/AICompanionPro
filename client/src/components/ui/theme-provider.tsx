@@ -26,9 +26,11 @@ export function ThemeProvider({
   storageKey = "vite-ui-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  )
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Clear any existing theme preference and force light mode
+    localStorage.removeItem(storageKey);
+    return "light";
+  })
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -46,6 +48,12 @@ export function ThemeProvider({
     }
 
     root.classList.add(theme)
+    
+    // Ensure light mode is properly applied by removing any existing dark class
+    if (theme === "light") {
+      root.classList.remove("dark")
+      root.classList.add("light")
+    }
   }, [theme])
 
   const value = {

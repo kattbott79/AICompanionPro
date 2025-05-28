@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  /* Light theme colors */
-  --background: 0 0% 100%;
-  --foreground: 222 84% 4.9%;
+  /* Force light theme as default */
+  --background: 0 0% 100%; /* Pure white background */
+  --foreground: 222 84% 4.9%; /* Dark text */
   --muted: 210 40% 98%;
   --muted-foreground: 215 13.8% 44.1%;
   --popover: 0 0% 100%;
