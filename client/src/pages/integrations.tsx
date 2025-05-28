@@ -45,8 +45,9 @@ export default function Integrations() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedIntegration, setSelectedIntegration] = useState<Integration | null>(null);
 
-  // Sample integrations with emotional intelligence features
+  // Comprehensive integrations with emotional intelligence features
   const integrations: Integration[] = [
+    // Communication Platforms
     {
       id: 1,
       name: "Slack",
@@ -65,19 +66,19 @@ export default function Integrations() {
     },
     {
       id: 2,
-      name: "Twitter/X",
-      category: "social",
-      description: "Post content based on emotional states and audience sentiment",
-      provider: "twitter",
+      name: "Microsoft Teams",
+      category: "communication",
+      description: "Enhance team collaboration with emotional context awareness",
+      provider: "teams",
       iconUrl: "/api/placeholder/40/40",
-      color: "bg-gradient-to-r from-blue-500 to-cyan-500",
+      color: "bg-gradient-to-r from-blue-600 to-purple-600",
       isConnected: false,
       emotionalTriggers: {
-        supportedEmotions: ["joy", "confidence", "inspiration", "empathy"],
+        supportedEmotions: ["collaboration", "focus", "urgency", "celebration"],
         activeCount: 0
       },
-      popularity: 89,
-      rating: 4.6
+      popularity: 92,
+      rating: 4.7
     },
     {
       id: 3,
@@ -92,11 +93,45 @@ export default function Integrations() {
         supportedEmotions: ["empathy", "urgency", "gratitude", "concern"],
         activeCount: 2
       },
-      popularity: 92,
+      popularity: 94,
       rating: 4.7
     },
     {
       id: 4,
+      name: "Outlook",
+      category: "communication",
+      description: "Professional email management with emotional intelligence insights",
+      provider: "outlook",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-500 to-indigo-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["professionalism", "urgency", "gratitude", "empathy"],
+        activeCount: 0
+      },
+      popularity: 88,
+      rating: 4.5
+    },
+    {
+      id: 5,
+      name: "Discord",
+      category: "communication",
+      description: "Community engagement with real-time emotion detection",
+      provider: "discord",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-indigo-500 to-purple-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["excitement", "gaming", "community", "support"],
+        activeCount: 0
+      },
+      popularity: 85,
+      rating: 4.6
+    },
+
+    // Social Media Platforms
+    {
+      id: 6,
       name: "Instagram",
       category: "social",
       description: "Create posts that resonate with your emotional brand voice",
@@ -108,13 +143,77 @@ export default function Integrations() {
         supportedEmotions: ["joy", "inspiration", "creativity", "confidence"],
         activeCount: 0
       },
-      popularity: 87,
+      popularity: 96,
+      rating: 4.8
+    },
+    {
+      id: 7,
+      name: "Twitter/X",
+      category: "social",
+      description: "Post content based on emotional states and audience sentiment",
+      provider: "twitter",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-gray-800 to-gray-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["joy", "confidence", "inspiration", "empathy"],
+        activeCount: 0
+      },
+      popularity: 89,
+      rating: 4.6
+    },
+    {
+      id: 8,
+      name: "Facebook",
+      category: "social",
+      description: "Share emotionally engaging content with friends and family",
+      provider: "facebook",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-600 to-blue-700",
+      isConnected: true,
+      emotionalTriggers: {
+        supportedEmotions: ["happiness", "nostalgia", "connection", "celebration"],
+        activeCount: 2
+      },
+      popularity: 93,
+      rating: 4.4
+    },
+    {
+      id: 9,
+      name: "LinkedIn",
+      category: "social",
+      description: "Professional networking with emotional intelligence for career growth",
+      provider: "linkedin",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-700 to-blue-800",
+      isConnected: true,
+      emotionalTriggers: {
+        supportedEmotions: ["achievement", "networking", "professionalism", "inspiration"],
+        activeCount: 3
+      },
+      popularity: 91,
+      rating: 4.7
+    },
+    {
+      id: 10,
+      name: "TikTok",
+      category: "social",
+      description: "Create viral content that resonates emotionally with audiences",
+      provider: "tiktok",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-pink-400 to-red-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["entertainment", "creativity", "viral", "trending"],
+        activeCount: 0
+      },
+      popularity: 94,
       rating: 4.5
     },
     {
-      id: 5,
+      id: 11,
       name: "YouTube",
-      category: "content",
+      category: "social",
       description: "Optimize video content based on emotional engagement metrics",
       provider: "youtube",
       iconUrl: "/api/placeholder/40/40",
@@ -124,15 +223,329 @@ export default function Integrations() {
         supportedEmotions: ["excitement", "curiosity", "entertainment", "education"],
         activeCount: 4
       },
-      popularity: 91,
+      popularity: 97,
       rating: 4.9
     },
     {
-      id: 6,
-      name: "Trading Bot",
+      id: 12,
+      name: "Snapchat",
+      category: "social",
+      description: "Share moments with emotional filters and AR experiences",
+      provider: "snapchat",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-yellow-400 to-yellow-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["fun", "spontaneous", "friendship", "creativity"],
+        activeCount: 0
+      },
+      popularity: 82,
+      rating: 4.3
+    },
+
+    // Healthcare EHR Systems
+    {
+      id: 13,
+      name: "SimplePractice",
+      category: "healthcare",
+      description: "Mental health practice management with emotional insights integration",
+      provider: "simplepractice",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-teal-500 to-blue-500",
+      isConnected: true,
+      emotionalTriggers: {
+        supportedEmotions: ["empathy", "healing", "progress", "support"],
+        activeCount: 5
+      },
+      popularity: 89,
+      rating: 4.8
+    },
+    {
+      id: 14,
+      name: "Epic",
+      category: "healthcare",
+      description: "Enterprise EHR system with AI-powered emotional patient insights",
+      provider: "epic",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-purple-600 to-indigo-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["care", "precision", "efficiency", "empathy"],
+        activeCount: 0
+      },
+      popularity: 95,
+      rating: 4.7
+    },
+    {
+      id: 15,
+      name: "Cerner",
+      category: "healthcare",
+      description: "Healthcare technology with emotional wellness tracking capabilities",
+      provider: "cerner",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-red-500 to-pink-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["wellness", "recovery", "compassion", "trust"],
+        activeCount: 0
+      },
+      popularity: 87,
+      rating: 4.5
+    },
+    {
+      id: 16,
+      name: "Athenahealth",
+      category: "healthcare",
+      description: "Cloud-based EHR with patient emotional state monitoring",
+      provider: "athenahealth",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-green-500 to-teal-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["health", "progress", "hope", "care"],
+        activeCount: 0
+      },
+      popularity: 84,
+      rating: 4.4
+    },
+    {
+      id: 17,
+      name: "Allscripts",
+      category: "healthcare",
+      description: "Comprehensive healthcare solutions with emotional analytics",
+      provider: "allscripts",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-600 to-cyan-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["healing", "support", "trust", "improvement"],
+        activeCount: 0
+      },
+      popularity: 81,
+      rating: 4.3
+    },
+
+    // Sports Betting & Gaming
+    {
+      id: 18,
+      name: "DraftKings",
+      category: "betting",
+      description: "Sports betting with emotional control and responsible gaming insights",
+      provider: "draftkings",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-green-600 to-emerald-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["excitement", "caution", "confidence", "restraint"],
+        activeCount: 0
+      },
+      popularity: 92,
+      rating: 4.6
+    },
+    {
+      id: 19,
+      name: "FanDuel",
+      category: "betting",
+      description: "Fantasy sports and betting with emotional wellness monitoring",
+      provider: "fanduel",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-600 to-purple-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["thrill", "discipline", "strategy", "mindfulness"],
+        activeCount: 0
+      },
+      popularity: 90,
+      rating: 4.5
+    },
+    {
+      id: 20,
+      name: "BetMGM",
+      category: "betting",
+      description: "Casino and sports betting with AI-powered emotional insights",
+      provider: "betmgm",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-yellow-500 to-orange-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["entertainment", "control", "awareness", "balance"],
+        activeCount: 0
+      },
+      popularity: 88,
+      rating: 4.4
+    },
+    {
+      id: 21,
+      name: "Caesars Sportsbook",
+      category: "betting",
+      description: "Premium betting experience with emotional health safeguards",
+      provider: "caesars",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-purple-700 to-pink-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["luxury", "responsibility", "excitement", "wisdom"],
+        activeCount: 0
+      },
+      popularity: 85,
+      rating: 4.3
+    },
+    {
+      id: 22,
+      name: "WynnBET",
+      category: "betting",
+      description: "High-end sports betting with personalized emotional insights",
+      provider: "wynnbet",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-red-600 to-yellow-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["sophistication", "restraint", "enjoyment", "awareness"],
+        activeCount: 0
+      },
+      popularity: 78,
+      rating: 4.2
+    },
+
+    // Real Estate Platforms
+    {
+      id: 23,
+      name: "MLS",
+      category: "realestate",
+      description: "Multiple Listing Service integration with buyer emotion insights",
+      provider: "mls",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-indigo-600 to-blue-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["excitement", "anxiety", "hope", "determination"],
+        activeCount: 0
+      },
+      popularity: 96,
+      rating: 4.8
+    },
+    {
+      id: 24,
+      name: "Zillow",
+      category: "realestate",
+      description: "Home search and valuation with emotional home-buying insights",
+      provider: "zillow",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-500 to-teal-500",
+      isConnected: true,
+      emotionalTriggers: {
+        supportedEmotions: ["dreaming", "aspiration", "security", "investment"],
+        activeCount: 3
+      },
+      popularity: 94,
+      rating: 4.6
+    },
+    {
+      id: 25,
+      name: "Realtor.com",
+      category: "realestate",
+      description: "Premier real estate platform with emotional buyer journey tracking",
+      provider: "realtor",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-red-500 to-orange-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["home", "family", "achievement", "stability"],
+        activeCount: 0
+      },
+      popularity: 92,
+      rating: 4.7
+    },
+    {
+      id: 26,
+      name: "Redfin",
+      category: "realestate",
+      description: "Tech-powered real estate with AI-driven emotional market insights",
+      provider: "redfin",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-red-600 to-pink-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["innovation", "transparency", "confidence", "empowerment"],
+        activeCount: 0
+      },
+      popularity: 89,
+      rating: 4.5
+    },
+    {
+      id: 27,
+      name: "Compass",
+      category: "realestate",
+      description: "Modern real estate platform with emotional client relationship tools",
+      provider: "compass",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-gray-700 to-gray-900",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["luxury", "sophistication", "trust", "excellence"],
+        activeCount: 0
+      },
+      popularity: 86,
+      rating: 4.4
+    },
+
+    // AI & Productivity Tools
+    {
+      id: 28,
+      name: "ChatGPT",
+      category: "ai",
+      description: "Advanced AI assistant with emotional context understanding",
+      provider: "openai",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-green-500 to-teal-500",
+      isConnected: true,
+      emotionalTriggers: {
+        supportedEmotions: ["curiosity", "learning", "productivity", "creativity"],
+        activeCount: 4
+      },
+      popularity: 98,
+      rating: 4.9
+    },
+    {
+      id: 29,
+      name: "Notion",
+      category: "productivity",
+      description: "All-in-one workspace with emotional state tracking for teams",
+      provider: "notion",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-gray-800 to-gray-600",
+      isConnected: true,
+      emotionalTriggers: {
+        supportedEmotions: ["organization", "collaboration", "progress", "clarity"],
+        activeCount: 2
+      },
+      popularity: 91,
+      rating: 4.7
+    },
+    {
+      id: 30,
+      name: "Trello",
+      category: "productivity",
+      description: "Project management with team emotional wellness monitoring",
+      provider: "trello",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-blue-500 to-indigo-500",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["accomplishment", "teamwork", "efficiency", "satisfaction"],
+        activeCount: 0
+      },
+      popularity: 87,
+      rating: 4.5
+    },
+
+    // Trading & Finance
+    {
+      id: 31,
+      name: "Robinhood",
       category: "finance",
-      description: "Make trading decisions influenced by market sentiment and personal emotion",
-      provider: "trading",
+      description: "Commission-free trading with emotional decision-making insights",
+      provider: "robinhood",
       iconUrl: "/api/placeholder/40/40",
       color: "bg-gradient-to-r from-green-500 to-emerald-500",
       isConnected: false,
@@ -140,8 +553,40 @@ export default function Integrations() {
         supportedEmotions: ["confidence", "fear", "greed", "patience"],
         activeCount: 0
       },
-      popularity: 78,
+      popularity: 89,
       rating: 4.3
+    },
+    {
+      id: 32,
+      name: "TD Ameritrade",
+      category: "finance",
+      description: "Professional trading platform with emotional market analysis",
+      provider: "tdameritrade",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-green-600 to-blue-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["strategy", "discipline", "analysis", "growth"],
+        activeCount: 0
+      },
+      popularity: 92,
+      rating: 4.6
+    },
+    {
+      id: 33,
+      name: "E*TRADE",
+      category: "finance",
+      description: "Online trading with AI-powered emotional trading psychology",
+      provider: "etrade",
+      iconUrl: "/api/placeholder/40/40",
+      color: "bg-gradient-to-r from-purple-600 to-blue-600",
+      isConnected: false,
+      emotionalTriggers: {
+        supportedEmotions: ["intelligence", "precision", "opportunity", "control"],
+        activeCount: 0
+      },
+      popularity: 88,
+      rating: 4.4
     }
   ];
 
@@ -185,9 +630,12 @@ export default function Integrations() {
     { id: "all", name: "All", icon: Sparkles },
     { id: "communication", name: "Communication", icon: MessageSquare },
     { id: "social", name: "Social Media", icon: Heart },
-    { id: "content", name: "Content", icon: Youtube },
-    { id: "finance", name: "Finance", icon: DollarSign },
-    { id: "productivity", name: "Productivity", icon: Calendar }
+    { id: "healthcare", name: "Healthcare", icon: Heart },
+    { id: "betting", name: "Sports Betting", icon: TrendingUp },
+    { id: "realestate", name: "Real Estate", icon: Calendar },
+    { id: "ai", name: "AI Tools", icon: Brain },
+    { id: "productivity", name: "Productivity", icon: Settings },
+    { id: "finance", name: "Finance", icon: DollarSign }
   ];
 
   const filteredIntegrations = integrations.filter(integration => {
@@ -394,15 +842,15 @@ export default function Integrations() {
           </div>
 
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-6 bg-white/70 shadow-lg border-0">
+            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-9 bg-white/70 shadow-lg border-0">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="flex items-center gap-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white"
+                  className="flex items-center gap-1 text-xs lg:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white"
                 >
-                  <category.icon className="w-4 h-4" />
-                  <span className="hidden sm:inline">{category.name}</span>
+                  <category.icon className="w-3 h-3 lg:w-4 lg:h-4" />
+                  <span className="hidden md:inline">{category.name}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
