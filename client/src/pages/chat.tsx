@@ -55,8 +55,8 @@ export default function Chat() {
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-white/80 dark:bg-blue-900/30 backdrop-blur-xl border-r border-cyan-200/30 dark:border-cyan-700/30 flex-col">
-          <div className="p-6 border-b border-cyan-200/30 dark:border-cyan-700/30">
+        <div className="hidden lg:flex w-80 bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl border-r border-gray-200/20 dark:border-gray-700/20 flex-col shadow-lg">
+          <div className="p-6 border-b border-gray-200/20 dark:border-gray-700/20">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
@@ -179,7 +179,7 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-cyan-200/30 dark:border-cyan-700/30 bg-white/80 dark:bg-blue-900/30 backdrop-blur-sm">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/20 dark:border-gray-700/20 bg-white/70 dark:bg-gray-900/40 backdrop-blur-sm shadow-lg">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full overflow-hidden">
                 <img 
