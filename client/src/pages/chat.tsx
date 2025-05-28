@@ -57,8 +57,12 @@ export default function Chat() {
         <div className="hidden lg:flex w-80 bg-white/90 dark:bg-slate-800/50 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 flex-col">
           <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-                <Bot className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <img 
+                  src="@assets/favicon.wordpress.png" 
+                  alt="adopt.a.bot logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h2>
@@ -176,8 +180,12 @@ export default function Chat() {
           {/* Mobile Header */}
           <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 dark:border-gray-700/50 bg-white/90 dark:bg-gray-800/50 backdrop-blur-sm">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-                <Bot className="w-4 h-4 text-white" />
+              <div className="w-8 h-8 rounded-full overflow-hidden">
+                <img 
+                  src="@assets/favicon.wordpress.png" 
+                  alt="adopt.a.bot logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">adopt.a.bot</h1>
