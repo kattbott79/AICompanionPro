@@ -62,7 +62,7 @@ export default function Chat() {
               </div>
               <div>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h2>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by Hume AI</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by HUME AI</p>
               </div>
             </div>
 
@@ -174,14 +174,14 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-700/50 bg-gray-800/50 backdrop-blur-sm">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 dark:border-gray-700/50 bg-white/90 dark:bg-gray-800/50 backdrop-blur-sm">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
                 <Bot className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-bold">AI Consultant</h1>
-                <p className="text-xs text-gray-400">Powered by {selectedProvider}</p>
+                <h1 className="text-lg font-bold text-gray-900 dark:text-gray-100">AI Consultant</h1>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Powered by HUME AI</p>
               </div>
             </div>
 
