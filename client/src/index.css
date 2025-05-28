@@ -96,11 +96,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  /* Set dark mode by default for the AI consultant app */
-  html {
-    @apply dark;
-  }
 }
 
 @layer components {
