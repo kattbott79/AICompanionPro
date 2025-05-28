@@ -843,7 +843,7 @@ export default function Integrations() {
           </div>
 
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-9 bg-white/70 shadow-lg border-0">
+            <TabsList className="h-10 items-center justify-center rounded-md p-1 text-muted-foreground grid w-full grid-cols-3 lg:grid-cols-9 bg-white/70 shadow-lg border-0 text-center">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category.id}
