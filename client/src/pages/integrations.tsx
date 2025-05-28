@@ -10,8 +10,9 @@ import { Progress } from "@/components/ui/progress";
 import { 
   Search, ArrowLeft, Zap, Heart, Brain, Sparkles, 
   MessageSquare, Twitter, Mail, Slack, Instagram, 
-  Youtube, TrendingUp, DollarSign, Calendar, 
-  Settings, CheckCircle, AlertCircle, Play, Pause
+  Youtube, TrendingUp, DollarSign, Calendar, Home,
+  Settings, CheckCircle, AlertCircle, Play, Pause,
+  Share2, Stethoscope, Target, Briefcase
 } from "lucide-react";
 
 interface Integration {
@@ -629,12 +630,12 @@ export default function Integrations() {
   const categories = [
     { id: "all", name: "All", icon: Sparkles },
     { id: "communication", name: "Communication", icon: MessageSquare },
-    { id: "social", name: "Social Media", icon: Heart },
-    { id: "healthcare", name: "Healthcare", icon: Heart },
-    { id: "betting", name: "Sports Betting", icon: TrendingUp },
-    { id: "realestate", name: "Real Estate", icon: Calendar },
+    { id: "social", name: "Social Media", icon: Share2 },
+    { id: "healthcare", name: "Healthcare", icon: Stethoscope },
+    { id: "betting", name: "Sports Betting", icon: Target },
+    { id: "realestate", name: "Real Estate", icon: Home },
     { id: "ai", name: "AI Tools", icon: Brain },
-    { id: "productivity", name: "Productivity", icon: Settings },
+    { id: "productivity", name: "Productivity", icon: Briefcase },
     { id: "finance", name: "Finance", icon: DollarSign }
   ];
 
