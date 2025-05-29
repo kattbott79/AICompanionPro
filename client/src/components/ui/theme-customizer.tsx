@@ -133,7 +133,7 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
     }));
   };
 
-  const updateThemeGradient = (gradientKey: keyof CustomTheme['gradients'], gradient: string) => {
+  const updateThemeGradient = (gradientKey: keyof NonNullable<CustomTheme['gradients']>, gradient: string) => {
     setCustomTheme(prev => ({
       ...prev,
       gradients: {

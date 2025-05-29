@@ -57,16 +57,11 @@ export function GradientPicker({ gradient, onChange, label, className }: Gradien
     }
   }, [gradient]);
 
-  const generateGradient = () => {
+  const generateGradient = useCallback(() => {
     const sortedStops = [...stops].sort((a, b) => a.position - b.position);
     const stopStrings = sortedStops.map(stop => `${stop.color} ${stop.position}%`);
     return `linear-gradient(${direction}, ${stopStrings.join(', ')})`;
-  };
-
-  const updateGradient = () => {
-    const newGradient = generateGradient();
-    onChange(newGradient);
-  };
+  }, [direction, stops]);
 
   const addStop = () => {
     const newPosition = stops.length > 0 ? Math.max(...stops.map(s => s.position)) + 10 : 50;
@@ -89,8 +84,9 @@ export function GradientPicker({ gradient, onChange, label, className }: Gradien
   };
 
   useEffect(() => {
-    updateGradient();
-  }, [direction, stops]);
+    const newGradient = generateGradient();
+    onChange(newGradient);
+  }, [direction, stops, generateGradient, onChange]);
 
   const presetGradients = [
     "linear-gradient(to right, #667eea, #764ba2)",
