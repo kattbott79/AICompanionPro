@@ -122,7 +122,8 @@ Think of me as your personal AI/ML engineer who's here to help automate your lif
         ...prev,
         messages: [...prev.messages, assistantMessage],
         isLoading: false,
-        suggestions: response.suggestions || [],
+        // Don't override suggestions if we just set them locally
+        suggestions: prev.currentStep === 'category_selected' ? prev.suggestions : (response.suggestions || []),
         currentStep: response.conversationState.currentStep,
         selectedTemplate: response.conversationState.selectedTemplate,
         emotionalState: response.emotionalContext?.detectedEmotion || prev.emotionalState,
@@ -165,39 +166,51 @@ Think of me as your personal AI/ML engineer who's here to help automate your lif
       }
     }
     
-    // Update suggestions based on the selected option
-    let newSuggestions: string[] = [];
-    
+    // Handle category selections without sending to AI
     if (option.includes('Business Automation')) {
-      newSuggestions = [
-        "📧 Email & Marketing Automation",
-        "📋 Customer Management (CRM)",
-        "💰 Invoice & Billing Automation", 
-        "📅 Appointment Scheduling",
-        "📊 Data & Reports Automation"
-      ];
-    } else if (option.includes('Personal Life Helper')) {
-      newSuggestions = [
-        "🏠 Home Management & Reminders",
-        "💰 Personal Finance Tracking",
-        "🎯 Goal & Habit Tracking",
-        "📱 Social Media Management",
-        "📚 Learning & Skill Development"
-      ];
-    } else if (option.includes('specific in mind')) {
-      newSuggestions = [
-        "🔍 Browse All Templates",
-        "💬 Describe Your Needs",
-        "🎯 Custom Solution Builder"
-      ];
+      setState(prev => ({
+        ...prev,
+        suggestions: [
+          "📧 Email & Marketing Automation",
+          "📋 Customer Management (CRM)",
+          "💰 Invoice & Billing Automation", 
+          "📅 Appointment Scheduling",
+          "📊 Data & Reports Automation"
+        ],
+        currentStep: 'category_selected'
+      }));
+      return;
+    } 
+    
+    if (option.includes('Personal Life Helper')) {
+      setState(prev => ({
+        ...prev,
+        suggestions: [
+          "🏠 Home Management & Reminders",
+          "💰 Personal Finance Tracking",
+          "🎯 Goal & Habit Tracking",
+          "📱 Social Media Management",
+          "📚 Learning & Skill Development"
+        ],
+        currentStep: 'category_selected'
+      }));
+      return;
     }
     
-    setState(prev => ({
-      ...prev,
-      suggestions: newSuggestions,
-      currentStep: 'category_selected'
-    }));
+    if (option.includes('specific in mind')) {
+      setState(prev => ({
+        ...prev,
+        suggestions: [
+          "🔍 Browse All Templates",
+          "💬 Describe Your Needs",
+          "🎯 Custom Solution Builder"
+        ],
+        currentStep: 'category_selected'
+      }));
+      return;
+    }
     
+    // For other options, send to AI
     sendMessage(`Selected: ${option}`);
   }, [sendMessage]);
 
