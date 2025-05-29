@@ -5,7 +5,7 @@
 :root {
   /* adopt.a.bot Brand Theme - Navy, Baby Blue, Green & Pink */
   --background: 0 0% 100%; /* Pure white background */
-  --foreground: 248 68% 20%; /* Navy #211757 */
+  --foreground: 249 58% 22%; /* Navy #211757 */
   --muted: 185 30% 96%; /* Very light blue-tinted background */
   --muted-foreground: 248 40% 45%; /* Medium navy muted text */
   --popover: 0 0% 100%; /* White popover */
@@ -45,7 +45,7 @@
 
 .dark {
   /* adopt.a.bot Dark Theme - Navy Background */
-  --background: 248 68% 20%; /* Navy #211757 */
+  --background: 249 58% 22%; /* Navy #211757 */
   --foreground: 185 71% 85%; /* Light baby blue text */
   --muted: 248 50% 25%; /* Slightly lighter navy muted */
   --muted-foreground: 185 50% 70%; /* Light blue muted text */
