@@ -28,7 +28,7 @@ export function useChat(sessionId: string) {
     const loadConversation = async () => {
       try {
         const conversation = await aiService.getConversation(sessionId);
-        if (conversation) {
+        if (conversation && conversation.messages) {
           setState(prev => ({
             ...prev,
             currentStep: conversation.conversation.currentStep,

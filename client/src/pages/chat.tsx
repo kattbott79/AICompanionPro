@@ -232,8 +232,8 @@ export default function Chat() {
               <div className="max-w-6xl mx-auto">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h1 className="text-2xl font-bold text-gray-100">Choose Your Template</h1>
-                    <p className="text-gray-400">Select an automation template to get started</p>
+                    <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Choose Your Template</h1>
+                    <p className="text-gray-600 dark:text-gray-400">Select an automation template to get started</p>
                   </div>
                   <Button 
                     variant="outline" 
