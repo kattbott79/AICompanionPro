@@ -16,7 +16,6 @@ import {
   ExternalLink,
   Bot
 } from "lucide-react";
-
 import { Template } from "@/types/chat";
 import adoptABotLogo from "@assets/favicon.wordpress.png";
 import { useChat } from "@/hooks/useChat";
@@ -55,7 +54,7 @@ export default function Chat() {
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-white/70 backdrop-blur-sm border-r border-gray-200/50">
+        <div className="hidden lg:flex w-80 bg-white/70 backdrop-blur-sm border-r border-gray-200/50 flex-col shadow-lg">
           <div className="p-6 border-b border-gray-200/50">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
@@ -113,14 +112,14 @@ export default function Chat() {
                   <h3 className="text-lg font-semibold mb-4 text-gray-900">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80">
+                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="E-commerce automation" 
                         className="w-full h-16 object-cover rounded mb-2" 
                       />
                       <h4 className="font-medium text-cyan-600 text-sm mb-1">E-commerce Automation</h4>
-                      <p className="text-xs text-blue-600 dark:text-blue-400">Order processing, inventory alerts, customer follow-ups</p>
+                      <p className="text-xs text-blue-600">Order processing, inventory alerts, customer follow-ups</p>
                       <div className="flex items-center mt-2 text-xs text-cyan-500">
                         <span>★ 4.8</span>
                         <span className="mx-2">•</span>
@@ -129,7 +128,7 @@ export default function Chat() {
                     </div>
 
                     {/* Service Business Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80">
+                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Service business automation" 
@@ -145,7 +144,7 @@ export default function Chat() {
                     </div>
 
                     {/* Personal Assistant Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80">
+                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80 transition-colors">
                       <img 
                         src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Personal productivity automation" 
@@ -179,7 +178,7 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 0 bg-white/70 backdrop-blur-sm shadow-lg">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 bg-white/70 backdrop-blur-sm shadow-lg">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full overflow-hidden">
                 <img 
@@ -231,8 +230,8 @@ export default function Chat() {
               <div className="max-w-6xl mx-auto">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h1 className="text-2xl font-bold text-gray-100">Choose Your Template</h1>
-                    <p className="text-gray-400">Select an automation template to get started</p>
+                    <h1 className="text-2xl font-bold text-gray-900">Choose Your Template</h1>
+                    <p className="text-gray-600">Select an automation template to get started</p>
                   </div>
                   <Button 
                     variant="outline" 
