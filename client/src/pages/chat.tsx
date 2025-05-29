@@ -229,17 +229,16 @@ export default function Chat() {
 
           {/* Chat Interface or Template Grid */}
           {showTemplates ? (
-            <div className="flex-1 p-6 overflow-y-auto">
+            <div className="flex-1 p-6 overflow-y-auto bg-gradient-to-br from-[#6ae0e2] to-[#4dd4d7]">
               <div className="max-w-6xl mx-auto">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Choose Your Template</h1>
-                    <p className="text-gray-600 dark:text-gray-400">Select an automation template to get started</p>
+                    <h1 className="text-2xl font-bold text-white">Choose Your Template</h1>
+                    <p className="text-white/80">Select an automation template to get started</p>
                   </div>
                   <Button 
-                    variant="outline" 
                     onClick={() => setShowTemplates(false)}
-                    className="hidden lg:flex"
+                    className="hidden lg:flex bg-gradient-to-r from-[#f69bbe] to-[#38bd63] text-white hover:opacity-90 border-0"
                   >
                     Back to Chat
                   </Button>
@@ -254,7 +253,7 @@ export default function Chat() {
               </div>
             </div>
           ) : (
-            <div className="flex-1 max-w-4xl mx-auto w-full">
+            <div className="flex-1 max-w-4xl mx-auto w-full bg-gradient-to-br from-[#6ae0e2] to-[#4dd4d7]">
               <ChatInterface
                 sessionId={sessionId}
                 onTemplateSelect={handleTemplateSelect}
@@ -272,7 +271,7 @@ export default function Chat() {
           <Button
             size="lg"
             onClick={() => setShowTemplates(true)}
-            className="rounded-full w-14 h-14 shadow-lg bg-gradient-to-br from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+            className="rounded-full w-14 h-14 shadow-lg bg-gradient-to-br from-[#f69bbe] to-[#38bd63] hover:opacity-90 text-white border-0"
           >
             <Sparkles className="w-6 h-6" />
           </Button>

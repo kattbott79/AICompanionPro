@@ -36,7 +36,7 @@ export function MessageBubble({ message, className }: MessageBubbleProps) {
   if (isSystem) {
     return (
       <div className={cn("flex justify-center my-4", className)}>
-        <div className="px-3 py-1 bg-white/70 rounded-full text-xs text-gray-900">
+        <div className="px-3 py-1 bg-gradient-to-r from-[#6ae0e2] to-[#4dd4d7] rounded-full text-xs text-white">
           {message.content}
         </div>
       </div>
@@ -75,10 +75,9 @@ export function MessageBubble({ message, className }: MessageBubbleProps) {
         <div className={cn(
           "rounded-2xl px-4 py-3 shadow-sm backdrop-blur-sm border",
           isUser 
-            ? "text-white rounded-tr-sm border-primary/20" 
-            : "bg-white/90 text-foreground rounded-tl-sm border-border"
-        )}
-        style={isUser ? { backgroundColor: '#6ae0e2' } : {}}>
+            ? "text-white rounded-tr-sm border-white/20 bg-gradient-to-r from-[#6ae0e2] to-[#4dd4d7]" 
+            : "text-white rounded-tl-sm border-white/20 bg-gradient-to-r from-[#6ae0e2] to-[#4dd4d7]"
+        )}>
           <div className="prose prose-sm max-w-none">
             <ReactMarkdown
               components={{
