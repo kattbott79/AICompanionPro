@@ -106,6 +106,19 @@ export default function Chat() {
               onProviderChange={handleProviderChange}
             />
 
+            {/* Brand Color Demo */}
+            <div className="flex gap-2 p-3 bg-white/70 rounded-lg">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Baby Blue
+              </Button>
+              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                Pink
+              </Button>
+              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
+                Green
+              </Button>
+            </div>
+
             {/* Popular Templates Preview */}
             {!showTemplates && (
               <Card className="border-0 shadow-lg bg-white/70 backdrop-blur-sm">
