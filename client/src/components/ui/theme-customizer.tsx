@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ColorPicker } from "./color-picker";
+import { GradientPicker } from "./gradient-picker";
 import { useTheme } from "./theme-provider";
 import { 
   Palette, 
@@ -32,6 +33,12 @@ interface CustomTheme {
     card: string;
     border: string;
   };
+  gradients?: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    background: string;
+  };
 }
 
 interface ThemeCustomizerProps {
@@ -54,6 +61,12 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
       muted: "#f1f5f9",
       card: "#ffffff",
       border: "#e2e8f0"
+    },
+    gradients: {
+      primary: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)",
+      secondary: "linear-gradient(135deg, #64748b 0%, #475569 100%)",
+      accent: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
+      background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
     }
   });
 
@@ -120,6 +133,16 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
     }));
   };
 
+  const updateThemeGradient = (gradientKey: keyof CustomTheme['gradients'], gradient: string) => {
+    setCustomTheme(prev => ({
+      ...prev,
+      gradients: {
+        ...prev.gradients!,
+        [gradientKey]: gradient
+      }
+    }));
+  };
+
   const saveTheme = () => {
     const newTheme = { ...customTheme, name: themeName };
     const updatedThemes = [...savedThemes, newTheme];
@@ -150,6 +173,12 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
         muted: "#f1f5f9",
         card: "#ffffff",
         border: "#e2e8f0"
+      },
+      gradients: {
+        primary: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)",
+        secondary: "linear-gradient(135deg, #64748b 0%, #475569 100%)",
+        accent: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
+        background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
       }
     });
   };
@@ -251,10 +280,11 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
 
       <CardContent>
         <Tabs defaultValue="customize" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="customize">Customize</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="customize">Colors</TabsTrigger>
+            <TabsTrigger value="gradients">Gradients</TabsTrigger>
             <TabsTrigger value="presets">Presets</TabsTrigger>
-            <TabsTrigger value="saved">Saved Themes</TabsTrigger>
+            <TabsTrigger value="saved">Saved</TabsTrigger>
           </TabsList>
 
           <TabsContent value="customize" className="space-y-6">
@@ -310,6 +340,59 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
                   label="Border"
                   color={customTheme.colors.border}
                   onChange={(color) => updateThemeColor('border', color)}
+                />
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-4">
+                <Button onClick={saveTheme} size="sm">
+                  <Save className="w-4 h-4 mr-2" />
+                  Save Theme
+                </Button>
+                <Button onClick={exportTheme} variant="outline" size="sm">
+                  <Download className="w-4 h-4 mr-2" />
+                  Export
+                </Button>
+                <Button onClick={resetToDefault} variant="outline" size="sm">
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Reset
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="gradients" className="space-y-6">
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="theme-name">Theme Name</Label>
+                <Input
+                  id="theme-name"
+                  value={themeName}
+                  onChange={(e) => setThemeName(e.target.value)}
+                  placeholder="Enter theme name"
+                  className="mt-1"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <GradientPicker
+                  label="Primary Gradient"
+                  gradient={customTheme.gradients?.primary || ""}
+                  onChange={(gradient) => updateThemeGradient('primary', gradient)}
+                />
+                <GradientPicker
+                  label="Secondary Gradient"
+                  gradient={customTheme.gradients?.secondary || ""}
+                  onChange={(gradient) => updateThemeGradient('secondary', gradient)}
+                />
+                <GradientPicker
+                  label="Accent Gradient"
+                  gradient={customTheme.gradients?.accent || ""}
+                  onChange={(gradient) => updateThemeGradient('accent', gradient)}
+                />
+                <GradientPicker
+                  label="Background Gradient"
+                  gradient={customTheme.gradients?.background || ""}
+                  onChange={(gradient) => updateThemeGradient('background', gradient)}
                 />
               </div>
 
