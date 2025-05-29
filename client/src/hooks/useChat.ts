@@ -69,6 +69,13 @@ Think of me as your personal AI/ML engineer who's here to help automate your lif
     };
 
     loadConversation();
+    
+    // Cleanup abort controller on unmount
+    return () => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
   }, [sessionId, toast]);
 
   const sendMessage = useCallback(async (content: string) => {

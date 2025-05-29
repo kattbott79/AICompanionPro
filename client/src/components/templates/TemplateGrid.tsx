@@ -119,8 +119,8 @@ export function TemplateGrid({
       {/* Header with stats */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-100">Automation Templates</h2>
-          <p className="text-gray-400">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Automation Templates</h2>
+          <p className="text-gray-600 dark:text-gray-400">
             {stats.total} templates • {stats.avgRating}★ average rating
           </p>
         </div>
