@@ -113,15 +113,15 @@ export default function Chat() {
                   <h3 className="text-lg font-semibold mb-4 text-gray-900">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80">
+                    <div className="p-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg border border-primary/20 cursor-pointer hover:bg-gradient-to-r hover:from-primary/20 hover:to-secondary/20">
                       <img 
                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="E-commerce automation" 
                         className="w-full h-16 object-cover rounded mb-2" 
                       />
-                      <h4 className="font-medium text-cyan-600 text-sm mb-1">E-commerce Automation</h4>
-                      <p className="text-xs text-blue-600 dark:text-blue-400">Order processing, inventory alerts, customer follow-ups</p>
-                      <div className="flex items-center mt-2 text-xs text-cyan-500">
+                      <h4 className="font-medium text-primary text-sm mb-1">E-commerce Automation</h4>
+                      <p className="text-xs text-foreground/70">Order processing, inventory alerts, customer follow-ups</p>
+                      <div className="flex items-center mt-2 text-xs text-primary/70">
                         <span>★ 4.8</span>
                         <span className="mx-2">•</span>
                         <span>1.2k users</span>
@@ -129,15 +129,15 @@ export default function Chat() {
                     </div>
 
                     {/* Service Business Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80">
+                    <div className="p-3 bg-gradient-to-r from-accent/10 to-primary/10 rounded-lg border border-accent/20 cursor-pointer hover:bg-gradient-to-r hover:from-accent/20 hover:to-primary/20">
                       <img 
                         src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Service business automation" 
                         className="w-full h-16 object-cover rounded mb-2" 
                       />
-                      <h4 className="font-medium text-green-600 text-sm mb-1">Service Business</h4>
-                      <p className="text-xs text-blue-600">Appointment scheduling, client follow-ups, invoicing</p>
-                      <div className="flex items-center mt-2 text-xs text-cyan-500">
+                      <h4 className="font-medium text-accent text-sm mb-1">Service Business</h4>
+                      <p className="text-xs text-foreground/70">Appointment scheduling, client follow-ups, invoicing</p>
+                      <div className="flex items-center mt-2 text-xs text-accent/70">
                         <span>★ 4.9</span>
                         <span className="mx-2">•</span>
                         <span>890 users</span>
@@ -145,7 +145,7 @@ export default function Chat() {
                     </div>
 
                     {/* Personal Assistant Template Preview */}
-                    <div className="p-3 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 rounded-lg border border-blue-200/50 dark:border-blue-700/50 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-100/80 hover:to-teal-100/80">
+                    <div className="p-3 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-lg border border-secondary/20 cursor-pointer hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20">
                       <img 
                         src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=120" 
                         alt="Personal productivity automation" 
