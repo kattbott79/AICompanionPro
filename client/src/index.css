@@ -18,7 +18,7 @@
   --primary-foreground: 249 58% 22%; /* Navy on primary */
   --secondary: 337 83% 79%; /* Pink #f69bbe */
   --secondary-foreground: 249 58% 22%; /* Navy on secondary */
-  --accent: 139 54% 48%; /* Green #38bd63 */
+  --accent: 139 55% 48%; /* Green #38bd63 */
   --accent-foreground: 0 0% 100%; /* White on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
@@ -59,7 +59,7 @@
   --primary-foreground: 249 58% 12%; /* Deep navy on primary */
   --secondary: 337 83% 79%; /* Pink #f69bbe */
   --secondary-foreground: 249 58% 12%; /* Deep navy on secondary */
-  --accent: 139 54% 55%; /* Bright green */
+  --accent: 139 55% 48%; /* Green #38bd63 */
   --accent-foreground: 249 58% 12%; /* Deep navy on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 181 67% 85%;

@@ -82,11 +82,11 @@ export default function Chat() {
                 <Sparkles className="w-4 h-4 mr-2" />
                 Browse Templates
               </Button>
-              <Button variant="ghost" size="sm" className="w-full justify-start">
+              <Button variant="secondary" size="sm" className="w-full justify-start">
                 <HelpCircle className="w-4 h-4 mr-2" />
                 Help & Guide
               </Button>
-              <Button variant="ghost" size="sm" className="w-full justify-start">
+              <Button variant="outline" size="sm" className="w-full justify-start">
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
               </Button>
@@ -165,7 +165,7 @@ export default function Chat() {
 
                   <Button 
                     size="sm" 
-                    variant="outline" 
+                    variant="secondary" 
                     className="w-full mt-4"
                     onClick={() => setShowTemplates(true)}
                   >
