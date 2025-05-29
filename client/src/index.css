@@ -25,10 +25,6 @@
   --ring: 195 100% 50%;
   --radius: 0.75rem;
   
-  /* Custom button colors */
-  --primary-color: #0891b2; /* Cyan-600 */
-  --secondary-color: #0f766e; /* Teal-700 */
-  
   /* Chart colors */
   --chart-1: 207 90% 54%;
   --chart-2: 142 76% 36%;
