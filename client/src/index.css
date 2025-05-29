@@ -14,15 +14,15 @@
   --card-foreground: 248 68% 20%; /* Navy card text */
   --border: 248 20% 88%; /* Light navy border */
   --input: 248 15% 96%; /* Very light input background */
-  --primary: 181 64% 64%; /* Baby blue #6ae0e2 */
+  --primary: 185 71% 69%; /* Baby blue #6ae0e2 */
   --primary-foreground: 248 68% 20%; /* Navy on primary */
-  --secondary: 337 86% 80%; /* Pink #f69bbe */
+  --secondary: 338 85% 80%; /* Pink #f69bbe */
   --secondary-foreground: 248 68% 20%; /* Navy on secondary */
-  --accent: 140 55% 49%; /* Green #38bd63 */
+  --accent: 140 55% 48%; /* Green #38bd63 */
   --accent-foreground: 0 0% 100%; /* White on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --ring: 181 64% 64%;
+  --ring: 185 71% 69%;
   --radius: 0.75rem;
   
   /* Chart colors */
@@ -55,15 +55,15 @@
   --card-foreground: 0 0% 95%; /* Nearly white card text */
   --border: 248 40% 30%; /* Navy border */
   --input: 248 50% 28%; /* Dark navy input */
-  --primary: 181 64% 64%; /* Baby blue #6ae0e2 */
+  --primary: 185 71% 69%; /* Baby blue #6ae0e2 */
   --primary-foreground: 248 68% 20%; /* Navy on primary */
-  --secondary: 337 86% 80%; /* Pink #f69bbe */
+  --secondary: 338 85% 80%; /* Pink #f69bbe */
   --secondary-foreground: 248 68% 20%; /* Navy on secondary */
-  --accent: 140 55% 49%; /* Green #38bd63 */
+  --accent: 140 55% 48%; /* Green #38bd63 */
   --accent-foreground: 248 68% 20%; /* Navy on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 95%;
-  --ring: 181 64% 64%;
+  --ring: 185 71% 69%;
   --radius: 0.75rem;
   
   /* Chart colors for dark theme */
