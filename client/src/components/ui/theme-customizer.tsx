@@ -196,55 +196,55 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
 
   const presetThemes: CustomTheme[] = [
     {
-      name: "Ocean Blue",
+      name: "adopt.a.bot Brand",
+      colors: {
+        background: "#ffffff",
+        foreground: "#211757",
+        primary: "#6ae0e2",
+        secondary: "#f69bbe",
+        accent: "#38bd63",
+        muted: "#f0f9ff",
+        card: "#ffffff",
+        border: "#e0f2fe"
+      }
+    },
+    {
+      name: "Ocean Breeze",
       colors: {
         background: "#f0f9ff",
-        foreground: "#0c4a6e",
-        primary: "#0ea5e9",
-        secondary: "#0369a1",
-        accent: "#06b6d4",
+        foreground: "#211757",
+        primary: "#6ae0e2",
+        secondary: "#38bd63",
+        accent: "#f69bbe",
         muted: "#e0f2fe",
         card: "#ffffff",
         border: "#bae6fd"
       }
     },
     {
-      name: "Forest Green",
+      name: "Forest Fresh",
       colors: {
         background: "#f0fdf4",
-        foreground: "#14532d",
-        primary: "#22c55e",
-        secondary: "#16a34a",
-        accent: "#10b981",
+        foreground: "#211757",
+        primary: "#38bd63",
+        secondary: "#6ae0e2",
+        accent: "#f69bbe",
         muted: "#dcfce7",
         card: "#ffffff",
         border: "#bbf7d0"
       }
     },
     {
-      name: "Sunset Orange",
+      name: "Cotton Candy",
       colors: {
-        background: "#fff7ed",
-        foreground: "#9a3412",
-        primary: "#f97316",
-        secondary: "#ea580c",
-        accent: "#fb923c",
-        muted: "#fed7aa",
+        background: "#fef7f7",
+        foreground: "#211757",
+        primary: "#f69bbe",
+        secondary: "#6ae0e2",
+        accent: "#38bd63",
+        muted: "#fce7f3",
         card: "#ffffff",
-        border: "#fdba74"
-      }
-    },
-    {
-      name: "Purple Dream",
-      colors: {
-        background: "#faf5ff",
-        foreground: "#581c87",
-        primary: "#8b5cf6",
-        secondary: "#7c3aed",
-        accent: "#a855f7",
-        muted: "#e9d5ff",
-        card: "#ffffff",
-        border: "#c4b5fd"
+        border: "#f9a8d4"
       }
     }
   ];

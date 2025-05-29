@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  /* adopt.a.bot Theme - Exact Brand Colors */
+  /* adopt.a.bot Brand Theme - Navy, Baby Blue, Green & Pink */
   --background: 0 0% 100%; /* Pure white background */
   --foreground: 248 68% 20%; /* Navy #211757 */
-  --muted: 248 20% 95%; /* Very light navy tint */
+  --muted: 185 30% 96%; /* Very light blue-tinted background */
   --muted-foreground: 248 40% 45%; /* Medium navy muted text */
   --popover: 0 0% 100%; /* White popover */
   --popover-foreground: 248 68% 20%; /* Navy popover text */
   --card: 0 0% 100%; /* White card background */
   --card-foreground: 248 68% 20%; /* Navy card text */
-  --border: 248 20% 88%; /* Light navy border */
-  --input: 248 15% 96%; /* Very light input background */
+  --border: 185 25% 85%; /* Light blue-tinted border */
+  --input: 185 20% 96%; /* Very light blue input background */
   --primary: 185 71% 69%; /* Baby blue #6ae0e2 */
   --primary-foreground: 248 68% 20%; /* Navy on primary */
   --secondary: 338 85% 80%; /* Pink #f69bbe */
@@ -46,13 +46,13 @@
 .dark {
   /* adopt.a.bot Dark Theme - Navy Background */
   --background: 248 68% 20%; /* Navy #211757 */
-  --foreground: 0 0% 95%; /* Nearly white text */
+  --foreground: 185 71% 85%; /* Light baby blue text */
   --muted: 248 50% 25%; /* Slightly lighter navy muted */
-  --muted-foreground: 0 0% 75%; /* Light gray muted text */
+  --muted-foreground: 185 50% 70%; /* Light blue muted text */
   --popover: 248 68% 24%; /* Slightly lighter navy popover */
-  --popover-foreground: 0 0% 95%; /* Nearly white popover text */
+  --popover-foreground: 185 71% 85%; /* Light blue popover text */
   --card: 248 68% 24%; /* Slightly lighter navy card */
-  --card-foreground: 0 0% 95%; /* Nearly white card text */
+  --card-foreground: 185 71% 85%; /* Light blue card text */
   --border: 248 40% 30%; /* Navy border */
   --input: 248 50% 28%; /* Dark navy input */
   --primary: 185 71% 69%; /* Baby blue #6ae0e2 */
@@ -62,7 +62,7 @@
   --accent: 140 55% 48%; /* Green #38bd63 */
   --accent-foreground: 248 68% 20%; /* Navy on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 95%;
+  --destructive-foreground: 185 71% 85%;
   --ring: 185 71% 69%;
   --radius: 0.75rem;
   
