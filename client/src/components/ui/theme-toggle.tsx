@@ -40,6 +40,10 @@ export function ThemeToggle() {
           </Button>
         </DialogTrigger>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <div className="sr-only">
+            <h2>Theme Customizer</h2>
+            <p>Customize colors and gradients for your theme</p>
+          </div>
           <ThemeCustomizer onClose={() => setIsCustomizerOpen(false)} />
         </DialogContent>
       </Dialog>
