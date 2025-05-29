@@ -53,9 +53,12 @@ export function MessageBubble({ message, className }: MessageBubbleProps) {
       <div className={cn(
         "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center",
         isUser 
-          ? "bg-blue-500" 
-          : "bg-gradient-to-br from-blue-500 to-purple-600"
-      )}>
+          ? "" 
+          : ""
+      )}
+      style={{
+        backgroundColor: isUser ? '#6ae0e2' : '#38bd63'
+      }}>
         {isUser ? (
           <User className="w-4 h-4 text-white" />
         ) : (
@@ -72,9 +75,10 @@ export function MessageBubble({ message, className }: MessageBubbleProps) {
         <div className={cn(
           "rounded-2xl px-4 py-3 shadow-sm backdrop-blur-sm border",
           isUser 
-            ? "bg-blue-500 text-white rounded-tr-sm border-blue-400/20" 
-            : "bg-white/70 text-gray-900  rounded-tl-sm border-gray-200/50"
-        )}>
+            ? "text-white rounded-tr-sm border-primary/20" 
+            : "bg-white/90 text-foreground rounded-tl-sm border-border"
+        )}
+        style={isUser ? { backgroundColor: '#6ae0e2' } : {}}>
           <div className="prose prose-sm max-w-none">
             <ReactMarkdown
               components={{

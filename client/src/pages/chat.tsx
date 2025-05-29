@@ -51,7 +51,7 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-blue-950 dark:to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-pink-100 dark:bg-gradient-to-br dark:from-blue-100 dark:via-blue-50 dark:to-green-100">
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
@@ -106,34 +106,7 @@ export default function Chat() {
               onProviderChange={handleProviderChange}
             />
 
-            {/* Brand Color Demo */}
-            <div className="flex flex-col gap-2 p-3 bg-white/70 rounded-lg">
-              <div className="text-sm font-medium text-gray-700 mb-2">Your Brand Colors:</div>
-              <div 
-                className="px-4 py-2 rounded text-white text-center font-medium"
-                style={{ backgroundColor: '#6ae0e2' }}
-              >
-                Baby Blue #6ae0e2
-              </div>
-              <div 
-                className="px-4 py-2 rounded text-white text-center font-medium"
-                style={{ backgroundColor: '#f69bbe' }}
-              >
-                Pink #f69bbe
-              </div>
-              <div 
-                className="px-4 py-2 rounded text-white text-center font-medium"
-                style={{ backgroundColor: '#38bd63' }}
-              >
-                Green #38bd63
-              </div>
-              <div 
-                className="px-4 py-2 rounded text-white text-center font-medium"
-                style={{ backgroundColor: '#211757' }}
-              >
-                Navy #211757
-              </div>
-            </div>
+
 
             {/* Popular Templates Preview */}
             {!showTemplates && (
