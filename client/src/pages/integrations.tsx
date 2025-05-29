@@ -843,12 +843,12 @@ export default function Integrations() {
           </div>
 
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="h-12 items-center justify-center rounded-md p-2 text-muted-foreground flex flex-wrap gap-2 bg-white/70 shadow-lg border-0 min-h-fit">
+            <TabsList className="h-12 items-center justify-center rounded-md p-2 flex flex-wrap gap-2 bg-white/70 dark:bg-slate-800/70 shadow-lg border-0 min-h-fit">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="flex items-center gap-2 px-4 py-2 text-sm whitespace-nowrap data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-600 data-[state=active]:to-blue-600 data-[state=active]:text-white rounded-md"
+                  className="flex items-center gap-2 px-4 py-2 text-sm whitespace-nowrap text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-600 data-[state=active]:to-blue-600 data-[state=active]:text-white rounded-md transition-colors"
                 >
                   <category.icon className="w-4 h-4 flex-shrink-0" />
                   <span>{category.name}</span>
