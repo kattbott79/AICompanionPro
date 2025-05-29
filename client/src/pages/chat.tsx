@@ -51,7 +51,7 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-pink-100 dark:bg-gradient-to-br dark:from-blue-100 dark:via-blue-50 dark:to-green-100">
+    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-background to-secondary/10 dark:bg-gradient-to-br dark:from-primary/20 dark:via-background dark:to-accent/20">
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
