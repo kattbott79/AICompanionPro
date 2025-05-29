@@ -13,12 +13,7 @@ export function useChat(sessionId: string) {
     selectedProvider: "hume",
     emotionalState: "neutral",
     isVoiceActive: false,
-    suggestions: [
-      "🏢 Business Automation",
-      "🏠 Personal Life Helper", 
-      "🎨 Let me explore options",
-      "⚡ I have something specific in mind"
-    ],
+    suggestions: [],
   });
 
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -168,52 +163,8 @@ Don't worry about being perfect with your answer - the more you sound like yours
       }
     }
     
-    // Handle category selections without sending to AI
-    if (option.includes('Business Automation')) {
-      setState(prev => ({
-        ...prev,
-        suggestions: [
-          "📧 Email & Marketing Automation",
-          "📋 Customer Management (CRM)",
-          "💰 Invoice & Billing Automation", 
-          "📅 Appointment Scheduling",
-          "📊 Data & Reports Automation"
-        ],
-        currentStep: 'category_selected'
-      }));
-      return;
-    } 
-    
-    if (option.includes('Personal Life Helper')) {
-      setState(prev => ({
-        ...prev,
-        suggestions: [
-          "🏠 Home Management & Reminders",
-          "💰 Personal Finance Tracking",
-          "🎯 Goal & Habit Tracking",
-          "📱 Social Media Management",
-          "📚 Learning & Skill Development"
-        ],
-        currentStep: 'category_selected'
-      }));
-      return;
-    }
-    
-    if (option.includes('specific in mind')) {
-      setState(prev => ({
-        ...prev,
-        suggestions: [
-          "🔍 Browse All Templates",
-          "💬 Describe Your Needs",
-          "🎯 Custom Solution Builder"
-        ],
-        currentStep: 'category_selected'
-      }));
-      return;
-    }
-    
-    // For other options, send to AI
-    sendMessage(`Selected: ${option}`);
+    // Send all selections to AI for natural conversation flow
+    sendMessage(option);
   }, [sendMessage]);
 
   const selectTemplate = useCallback((templateName: string) => {
