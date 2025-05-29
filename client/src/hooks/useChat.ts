@@ -164,6 +164,40 @@ Think of me as your personal AI/ML engineer who's here to help automate your lif
         return;
       }
     }
+    
+    // Update suggestions based on the selected option
+    let newSuggestions: string[] = [];
+    
+    if (option.includes('Business Automation')) {
+      newSuggestions = [
+        "📧 Email & Marketing Automation",
+        "📋 Customer Management (CRM)",
+        "💰 Invoice & Billing Automation", 
+        "📅 Appointment Scheduling",
+        "📊 Data & Reports Automation"
+      ];
+    } else if (option.includes('Personal Life Helper')) {
+      newSuggestions = [
+        "🏠 Home Management & Reminders",
+        "💰 Personal Finance Tracking",
+        "🎯 Goal & Habit Tracking",
+        "📱 Social Media Management",
+        "📚 Learning & Skill Development"
+      ];
+    } else if (option.includes('specific in mind')) {
+      newSuggestions = [
+        "🔍 Browse All Templates",
+        "💬 Describe Your Needs",
+        "🎯 Custom Solution Builder"
+      ];
+    }
+    
+    setState(prev => ({
+      ...prev,
+      suggestions: newSuggestions,
+      currentStep: 'category_selected'
+    }));
+    
     sendMessage(`Selected: ${option}`);
   }, [sendMessage]);
 
