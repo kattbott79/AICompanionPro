@@ -1,7 +1,7 @@
 import { Moon, Sun, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ui/theme-provider";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { ThemeCustomizer } from "@/components/ui/theme-customizer";
 import { useState } from "react";
 
@@ -40,10 +40,10 @@ export function ThemeToggle() {
           </Button>
         </DialogTrigger>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          <div className="sr-only">
-            <h2>Theme Customizer</h2>
-            <p>Customize colors and gradients for your theme</p>
-          </div>
+          <DialogTitle className="sr-only">Theme Customizer</DialogTitle>
+          <DialogDescription className="sr-only">
+            Customize colors and gradients for your theme
+          </DialogDescription>
           <ThemeCustomizer onClose={() => setIsCustomizerOpen(false)} />
         </DialogContent>
       </Dialog>
