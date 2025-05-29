@@ -81,12 +81,14 @@ export function GradientPicker({ gradient, onChange, label, className }: Gradien
       i === index ? { ...stop, ...updates } : stop
     );
     setStops(newStops);
+    setTimeout(handleUpdate, 0);
   };
 
-  useEffect(() => {
+  // Update gradient when direction or stops change
+  const handleUpdate = () => {
     const newGradient = generateGradient();
     onChange(newGradient);
-  }, [direction, stops, generateGradient, onChange]);
+  };
 
   const presetGradients = [
     "linear-gradient(to right, #667eea, #764ba2)",
@@ -144,7 +146,7 @@ export function GradientPicker({ gradient, onChange, label, className }: Gradien
             {/* Direction Selector */}
             <div>
               <Label className="text-sm font-medium mb-2 block">Direction</Label>
-              <Select value={direction} onValueChange={setDirection}>
+              <Select value={direction} onValueChange={(value) => { setDirection(value); setTimeout(handleUpdate, 0); }}>
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>

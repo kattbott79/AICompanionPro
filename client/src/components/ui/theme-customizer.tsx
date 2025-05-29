@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ColorPicker } from "./color-picker";
-import { GradientPicker } from "./gradient-picker";
+import { SimpleGradientPicker } from "./simple-gradient-picker";
 import { useTheme } from "./theme-provider";
 import { 
   Palette, 
@@ -374,22 +374,22 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <GradientPicker
+                <SimpleGradientPicker
                   label="Primary Gradient"
                   gradient={customTheme.gradients?.primary || ""}
                   onChange={(gradient) => updateThemeGradient('primary', gradient)}
                 />
-                <GradientPicker
+                <SimpleGradientPicker
                   label="Secondary Gradient"
                   gradient={customTheme.gradients?.secondary || ""}
                   onChange={(gradient) => updateThemeGradient('secondary', gradient)}
                 />
-                <GradientPicker
+                <SimpleGradientPicker
                   label="Accent Gradient"
                   gradient={customTheme.gradients?.accent || ""}
                   onChange={(gradient) => updateThemeGradient('accent', gradient)}
                 />
-                <GradientPicker
+                <SimpleGradientPicker
                   label="Background Gradient"
                   gradient={customTheme.gradients?.background || ""}
                   onChange={(gradient) => updateThemeGradient('background', gradient)}
