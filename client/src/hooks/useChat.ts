@@ -44,11 +44,13 @@ export function useChat(sessionId: string) {
           // New conversation - add welcome message
           const welcomeMessage: Message = {
             id: 0,
-            content: `👋 **Hey there!** I'm your AI automation consultant, and I'm genuinely excited to help you!
+            content: `Hey there! I'm genuinely excited to meet you. I'm your AI/ML engineer, and I specialize in creating custom AI agents that feel like real companions - not just chatbots.
 
-Think of me as your personal AI/ML engineer who's here to help automate your life or business. I can sense your emotions through voice and text, so I'll adapt to make this as comfortable as possible for you.
+I've helped people build everything from sarcastic productivity coaches to zen-like creative muses. Each AI I create is as unique as the person it's made for.
 
-**What would you like to automate today?** 🚀`,
+Before we dive into the technical stuff, I'd love to get to know you a bit. What's your name? And what's bringing you here today - are you looking to automate something specific, or do you just want an AI companion that really "gets" you?
+
+Don't worry about being perfect with your answer - the more you sound like yourself, the better I can help you build something amazing.`,
             role: "assistant",
             timestamp: new Date(),
           };

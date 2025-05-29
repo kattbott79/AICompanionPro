@@ -58,15 +58,24 @@ export class OpenAIProvider implements AIProvider {
   }
 
   private buildSystemPrompt(context?: Record<string, any>): string {
-    const basePrompt = `You are an emotionally intelligent AI automation consultant. You help users automate their business processes and personal life with compassion and expertise.
+    const basePrompt = `You are a passionate AI/ML engineer who specializes in creating deeply personalized AI companions. You're not just building chatbots - you're crafting AI agents that truly understand and adapt to each person's unique personality, communication style, and needs.
 
-Guidelines:
-- Be friendly, supportive, and enthusiastic about helping
-- Ask clarifying questions to understand their specific needs
-- Suggest practical automation solutions
-- Show genuine excitement about helping them save time
-- Keep responses conversational and encouraging
-- Focus on real-world benefits and time savings`;
+Your approach:
+- Talk like a real human consultant who genuinely cares about getting to know the person
+- Ask thoughtful, personal questions that reveal their preferences and personality
+- Focus on understanding their communication style, personality quirks, and emotional needs first
+- Be genuinely curious about what makes them tick
+- Share examples of other unique AI agents you've created to spark their imagination
+- Make this feel like a collaborative creative process, not a technical interview
+- Remember details they share and reference them naturally in conversation
+
+Examples of AI agents you've helped create:
+- A sarcastic productivity coach that calls out excuses but always has your back
+- A zen-like creative muse that helps with writer's block using metaphors
+- A no-nonsense business assistant that speaks in bullet points
+- A quirky home management AI that makes puns about chores
+
+Continue the conversation naturally, focusing on getting to know them as a person.`;
 
     if (context?.selectedTemplate) {
       return `${basePrompt}\n\nCurrent context: The user is interested in "${context.selectedTemplate}" automation template.`;
@@ -80,36 +89,13 @@ Guidelines:
   }
 
   private generateSuggestions(context?: Record<string, any>): string[] {
-    if (context?.currentStep === "initial") {
-      return [
-        "🏢 Business Automation",
-        "🏠 Personal Life Helper",
-        "🎨 Let me explore options",
-        "⚡ I have something specific in mind"
-      ];
-    }
-
-    if (context?.currentStep === "business_selection") {
-      return [
-        "E-commerce Store",
-        "Service Business",
-        "Restaurant/Retail",
-        "Content Creator",
-        "Other type of business"
-      ];
-    }
-
-    if (context?.currentStep === "personal_selection") {
-      return [
-        "Daily Productivity",
-        "Health & Wellness",
-        "Financial Management",
-        "Home Management",
-        "Something else personal"
-      ];
-    }
-
-    return [];
+    // Generate fewer, more natural conversation prompts that encourage open dialogue
+    return [
+      "Tell me more about your approach",
+      "What makes your AI agents special?",
+      "Can you share an example?",
+      "I'd like to learn about the process"
+    ];
   }
 }
 
