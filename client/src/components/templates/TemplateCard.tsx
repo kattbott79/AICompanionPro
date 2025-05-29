@@ -50,7 +50,7 @@ export function TemplateCard({
     return (
       <Card className={cn(
         "group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg",
-        "bg-gray-800/50 border-gray-700/50 hover:border-gray-600/50",
+        "bg-card/50 border-border/50 hover:border-primary/50",
         getColorClass(template.color),
         className
       )}>
@@ -71,9 +71,9 @@ export function TemplateCard({
                 </Badge>
               </div>
               
-              <p className="text-sm text-gray-400 mb-2">{template.description}</p>
+              <p className="text-sm text-muted-foreground mb-2">{template.description}</p>
               
-              <div className="flex items-center space-x-4 text-xs text-gray-500">
+              <div className="flex items-center space-x-4 text-xs text-muted-foreground">
                 <div className="flex items-center space-x-1">
                   <Clock className="w-3 h-3" />
                   <span>{template.timesSaved}</span>
@@ -108,7 +108,7 @@ export function TemplateCard({
     <Card 
       className={cn(
         "group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg",
-        "bg-gray-800/50 border-gray-700/50 hover:border-gray-600/50",
+        "bg-card/50 border-border/50 hover:border-primary/50",
         getColorClass(template.color),
         className
       )}
@@ -129,7 +129,7 @@ export function TemplateCard({
         </div>
         
         {/* Description */}
-        <p className="text-xs text-gray-400 mb-3 line-clamp-2">
+        <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
           {template.description}
         </p>
         
@@ -138,15 +138,15 @@ export function TemplateCard({
           <div className="flex items-center justify-between text-xs">
             <div className="flex items-center space-x-1">
               <Clock className="w-3 h-3" />
-              <span className="text-gray-400">{template.timesSaved}</span>
+              <span className="text-muted-foreground">{template.timesSaved}</span>
             </div>
             <div className="flex items-center space-x-1">
               <Star className="w-3 h-3 text-yellow-400" />
-              <span className="text-gray-400">{template.rating}</span>
+              <span className="text-muted-foreground">{template.rating}</span>
             </div>
           </div>
           
-          <div className="flex items-center justify-between text-xs text-gray-500">
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
             <Badge variant="outline" className="text-xs py-0 px-2">
               {template.category}
             </Badge>

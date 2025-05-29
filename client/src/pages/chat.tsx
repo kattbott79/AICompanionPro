@@ -55,8 +55,8 @@ export default function Chat() {
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm border-r border-gray-200/50 dark:border-slate-700/50">
-          <div className="p-6 border-b border-gray-200/50">
+        <div className="hidden lg:flex w-80 bg-sidebar backdrop-blur-sm border-r border-sidebar-border">
+          <div className="p-6 border-b border-sidebar-border">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
@@ -66,8 +66,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-white">adopt.a.bot</h2>
-                <p className="text-xs text-gray-600 dark:text-gray-300">Powered by Hume AI</p>
+                <h2 className="text-lg font-bold text-sidebar-foreground">adopt.a.bot</h2>
+                <p className="text-xs text-sidebar-foreground/70">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ export default function Chat() {
             {!showTemplates && (
               <Card className="border-0 shadow-lg bg-white/70 backdrop-blur-sm">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-4 text-gray-900">Popular Templates</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-card-foreground">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
                     <div className="p-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg border border-primary/20 cursor-pointer hover:bg-gradient-to-r hover:from-primary/20 hover:to-secondary/20">
@@ -181,7 +181,7 @@ export default function Chat() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Mobile Header */}
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200/50 dark:border-slate-700/50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-lg">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-border bg-background/70 backdrop-blur-sm shadow-lg">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full overflow-hidden">
                 <img 
@@ -191,8 +191,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-slate-800 dark:text-white">adopt.a.bot</h1>
-                <p className="text-xs text-slate-600 dark:text-slate-300">Powered by Hume AI</p>
+                <h1 className="text-lg font-bold text-foreground">adopt.a.bot</h1>
+                <p className="text-xs text-muted-foreground">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -204,9 +204,9 @@ export default function Chat() {
                     <Menu className="w-5 h-5" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-80 bg-white/70 backdrop-blur-sm border-gray-200/50">
+                <SheetContent side="right" className="w-80 bg-background/70 backdrop-blur-sm border-border">
                   <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-lg font-semibold text-slate-800">Options</h2>
+                    <h2 className="text-lg font-semibold text-foreground">Options</h2>
                     <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)}>
                       <X className="w-4 h-4" />
                     </Button>
