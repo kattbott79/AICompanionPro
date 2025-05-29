@@ -276,16 +276,16 @@
   }
 }
 
-/* High contrast mode */
+/* High contrast mode with brand colors */
 @media (prefers-contrast: high) {
   :root {
-    --border: 214 13% 70%;
-    --input: 214 13% 70%;
+    --border: 181 67% 50%; /* Baby blue borders */
+    --input: 181 67% 90%; /* Light baby blue inputs */
   }
   
   .dark {
-    --border: 217 33% 40%;
-    --input: 217 33% 40%;
+    --border: 181 67% 60%; /* Bright baby blue borders */
+    --input: 249 58% 25%; /* Dark navy inputs */
   }
 }
 
