@@ -156,7 +156,14 @@ Think of me as your personal AI/ML engineer who's here to help automate your lif
     }
   }, [sessionId, state.selectedProvider, state.isLoading, toast]);
 
-  const selectOption = useCallback((option: string) => {
+  const selectOption = useCallback((option: string, onTemplateExplore?: () => void) => {
+    // Check if this is a template exploration request
+    if (option.toLowerCase().includes('explore') || option.toLowerCase().includes('template') || option.toLowerCase().includes('options')) {
+      if (onTemplateExplore) {
+        onTemplateExplore();
+        return;
+      }
+    }
     sendMessage(`Selected: ${option}`);
   }, [sendMessage]);
 

@@ -258,6 +258,7 @@ export default function Chat() {
                 sessionId={sessionId}
                 onTemplateSelect={handleTemplateSelect}
                 onProviderChange={handleProviderChange}
+                onTemplateExplore={() => setShowTemplates(true)}
                 className="h-full"
               />
             </div>

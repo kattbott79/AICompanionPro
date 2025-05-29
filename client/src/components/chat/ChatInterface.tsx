@@ -24,6 +24,7 @@ interface ChatInterfaceProps {
   sessionId: string;
   onTemplateSelect?: (templateId: number) => void;
   onProviderChange?: (provider: string) => void;
+  onTemplateExplore?: () => void;
   className?: string;
 }
 
@@ -31,6 +32,7 @@ export function ChatInterface({
   sessionId, 
   onTemplateSelect,
   onProviderChange,
+  onTemplateExplore,
   className 
 }: ChatInterfaceProps) {
   const {
@@ -195,7 +197,7 @@ export function ChatInterface({
                     key={index}
                     variant="outline"
                     size="sm"
-                    onClick={() => selectOption(suggestion)}
+                    onClick={() => selectOption(suggestion, onTemplateExplore)}
                     className="text-sm bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50 hover:scale-105 transition-all duration-200"
                   >
                     {suggestion}
