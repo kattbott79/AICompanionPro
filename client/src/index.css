@@ -14,15 +14,15 @@
   --card-foreground: 248 68% 20%; /* Navy card text */
   --border: 185 25% 85%; /* Light blue-tinted border */
   --input: 185 20% 96%; /* Very light blue input background */
-  --primary: 185 71% 69%; /* Baby blue #6ae0e2 */
-  --primary-foreground: 248 68% 20%; /* Navy on primary */
-  --secondary: 338 85% 80%; /* Pink #f69bbe */
-  --secondary-foreground: 248 68% 20%; /* Navy on secondary */
-  --accent: 140 55% 48%; /* Green #38bd63 */
+  --primary: 181 67% 65%; /* Baby blue #6ae0e2 */
+  --primary-foreground: 249 58% 22%; /* Navy on primary */
+  --secondary: 337 83% 79%; /* Pink #f69bbe */
+  --secondary-foreground: 249 58% 22%; /* Navy on secondary */
+  --accent: 139 54% 48%; /* Green #38bd63 */
   --accent-foreground: 0 0% 100%; /* White on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --ring: 185 71% 69%;
+  --ring: 181 67% 65%;
   --radius: 0.75rem;
   
   /* Chart colors */
