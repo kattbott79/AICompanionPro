@@ -122,14 +122,23 @@ export function ColorPicker({ color, onChange, label, className }: ColorPickerPr
                   id="hex-input"
                   value={color}
                   onChange={(e) => {
-                    const hex = e.target.value;
-                    if (/^#[0-9A-F]{6}$/i.test(hex)) {
+                    let hex = e.target.value;
+                    // Add # if missing
+                    if (!hex.startsWith('#')) {
+                      hex = '#' + hex;
+                    }
+                    // Allow partial typing and validate on complete hex
+                    if (hex.length <= 7) {
                       onChange(hex);
-                      setHsl(hexToHsl(hex));
+                      // Only update HSL if it's a complete valid hex
+                      if (/^#[0-9A-F]{6}$/i.test(hex)) {
+                        setHsl(hexToHsl(hex));
+                      }
                     }
                   }}
                   className="font-mono mt-1"
                   placeholder="#000000"
+                  maxLength={7}
                 />
               </div>
             </div>
