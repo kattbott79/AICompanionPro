@@ -51,12 +51,12 @@ export default function Chat() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-background to-secondary/10 dark:bg-gradient-to-br dark:from-primary/20 dark:via-background dark:to-accent/20">
+    <div className="min-h-screen bg-gradient-to-br from-[#211757] via-[#1a1344] to-[#211757]">
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
-        <div className="hidden lg:flex w-80 bg-sidebar backdrop-blur-sm border-r border-sidebar-border">
-          <div className="p-6 border-b border-sidebar-border">
+        <div className="hidden lg:flex w-80 bg-gradient-to-b from-[#6ae0e2] to-[#4dd4d7] backdrop-blur-sm border-r border-white/20">
+          <div className="p-6 border-b border-white/20">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img 
@@ -66,8 +66,8 @@ export default function Chat() {
                 />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-sidebar-foreground">adopt.a.bot</h2>
-                <p className="text-xs text-sidebar-foreground/70">Powered by Hume AI</p>
+                <h2 className="text-lg font-bold text-white">adopt.a.bot</h2>
+                <p className="text-xs text-white/80">Powered by Hume AI</p>
               </div>
             </div>
 
@@ -77,16 +77,16 @@ export default function Chat() {
                 variant={showTemplates ? "default" : "ghost"}
                 size="sm"
                 onClick={() => setShowTemplates(!showTemplates)}
-                className="w-full justify-start"
+                className="w-full justify-start bg-gradient-to-r from-[#f69bbe] to-[#e885a8] text-white hover:from-[#e885a8] hover:to-[#d971a1] border-0"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
                 Browse Templates
               </Button>
-              <Button variant="secondary" size="sm" className="w-full justify-start">
+              <Button size="sm" className="w-full justify-start bg-gradient-to-r from-[#38bd63] to-[#2da550] text-white hover:from-[#2da550] hover:to-[#228d3e] border-0">
                 <HelpCircle className="w-4 h-4 mr-2" />
                 Help & Guide
               </Button>
-              <Button variant="outline" size="sm" className="w-full justify-start">
+              <Button size="sm" className="w-full justify-start bg-gradient-to-r from-[#f69bbe] via-[#38bd63] to-[#6ae0e2] text-white hover:opacity-90 border-0">
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
               </Button>
@@ -110,9 +110,9 @@ export default function Chat() {
 
             {/* Popular Templates Preview */}
             {!showTemplates && (
-              <Card className="border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-[#6ae0e2] to-[#4dd4d7] backdrop-blur-sm">
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-4 text-card-foreground">Popular Templates</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-white">Popular Templates</h3>
                   <div className="space-y-3">
                     {/* E-commerce Template Preview */}
                     <div className="p-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg border border-primary/20 cursor-pointer hover:bg-gradient-to-r hover:from-primary/20 hover:to-secondary/20">
@@ -165,8 +165,7 @@ export default function Chat() {
 
                   <Button 
                     size="sm" 
-                    variant="secondary" 
-                    className="w-full mt-4"
+                    className="w-full mt-4 bg-gradient-to-r from-[#38bd63] to-[#f69bbe] text-white hover:opacity-90 border-0"
                     onClick={() => setShowTemplates(true)}
                   >
                     <ExternalLink className="w-3 h-3 mr-2" />
