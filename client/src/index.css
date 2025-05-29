@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  /* adopt.a.bot Brand Theme - Navy, Baby Blue, Green & Pink */
+  /* Magical Brand Color Harmony - No Grey Ever! */
   --background: 0 0% 100%; /* Pure white background */
   --foreground: 249 58% 22%; /* Navy #211757 */
-  --muted: 185 30% 96%; /* Very light blue-tinted background */
-  --muted-foreground: 248 40% 45%; /* Medium navy muted text */
-  --popover: 0 0% 100%; /* White popover */
-  --popover-foreground: 248 68% 20%; /* Navy popover text */
-  --card: 0 0% 100%; /* White card background */
-  --card-foreground: 248 68% 20%; /* Navy card text */
-  --border: 185 25% 85%; /* Light blue-tinted border */
-  --input: 185 20% 96%; /* Very light blue input background */
+  --muted: 181 67% 95%; /* Ultra light baby blue tint */
+  --muted-foreground: 249 58% 22%; /* Navy for muted text */
+  --popover: 181 67% 98%; /* Barely-there baby blue popover */
+  --popover-foreground: 249 58% 22%; /* Navy popover text */
+  --card: 181 67% 98%; /* Subtle baby blue card background */
+  --card-foreground: 249 58% 22%; /* Navy card text */
+  --border: 181 67% 85%; /* Baby blue borders */
+  --input: 181 67% 96%; /* Light baby blue inputs */
   --primary: 181 67% 65%; /* Baby blue #6ae0e2 */
   --primary-foreground: 249 58% 22%; /* Navy on primary */
   --secondary: 337 83% 79%; /* Pink #f69bbe */
@@ -25,63 +25,63 @@
   --ring: 181 67% 65%;
   --radius: 0.75rem;
   
-  /* Chart colors */
-  --chart-1: 207 90% 54%;
-  --chart-2: 142 76% 36%;
-  --chart-3: 45 93% 47%;
-  --chart-4: 280 87% 47%;
-  --chart-5: 14 91% 54%;
+  /* Vibrant brand-based chart colors */
+  --chart-1: 181 67% 65%; /* Baby blue */
+  --chart-2: 139 54% 48%; /* Green */
+  --chart-3: 337 83% 79%; /* Pink */
+  --chart-4: 249 58% 22%; /* Navy */
+  --chart-5: 139 54% 60%; /* Lighter green variant */
   
-  /* Sidebar colors */
-  --sidebar-background: 195 100% 96%;
-  --sidebar-foreground: 195 100% 20%;
-  --sidebar-primary: 195 100% 50%;
-  --sidebar-primary-foreground: 195 100% 98%;
-  --sidebar-accent: 190 60% 92%;
-  --sidebar-accent-foreground: 195 100% 15%;
-  --sidebar-border: 190 40% 85%;
-  --sidebar-ring: 195 100% 50%;
+  /* Beautiful sidebar with brand colors */
+  --sidebar-background: 181 67% 97%;
+  --sidebar-foreground: 249 58% 22%;
+  --sidebar-primary: 181 67% 65%;
+  --sidebar-primary-foreground: 249 58% 22%;
+  --sidebar-accent: 337 83% 92%;
+  --sidebar-accent-foreground: 249 58% 22%;
+  --sidebar-border: 181 67% 80%;
+  --sidebar-ring: 181 67% 65%;
 }
 
 .dark {
-  /* adopt.a.bot Dark Theme - Navy Background */
-  --background: 249 58% 22%; /* Navy #211757 */
-  --foreground: 185 71% 85%; /* Light baby blue text */
-  --muted: 248 50% 25%; /* Slightly lighter navy muted */
-  --muted-foreground: 185 50% 70%; /* Light blue muted text */
-  --popover: 248 68% 24%; /* Slightly lighter navy popover */
-  --popover-foreground: 185 71% 85%; /* Light blue popover text */
-  --card: 248 68% 24%; /* Slightly lighter navy card */
-  --card-foreground: 185 71% 85%; /* Light blue card text */
-  --border: 248 40% 30%; /* Navy border */
-  --input: 248 50% 28%; /* Dark navy input */
-  --primary: 185 71% 69%; /* Baby blue #6ae0e2 */
-  --primary-foreground: 248 68% 20%; /* Navy on primary */
-  --secondary: 338 85% 80%; /* Pink #f69bbe */
-  --secondary-foreground: 248 68% 20%; /* Navy on secondary */
-  --accent: 140 55% 48%; /* Green #38bd63 */
-  --accent-foreground: 248 68% 20%; /* Navy on accent */
+  /* Magical Dark Theme - Rich Navy with Brand Color Magic */
+  --background: 249 58% 12%; /* Deep navy background */
+  --foreground: 181 67% 85%; /* Light baby blue text */
+  --muted: 249 58% 18%; /* Darker navy for muted areas */
+  --muted-foreground: 181 67% 75%; /* Baby blue muted text */
+  --popover: 249 58% 15%; /* Rich navy popover */
+  --popover-foreground: 181 67% 85%; /* Baby blue popover text */
+  --card: 249 58% 16%; /* Rich navy card */
+  --card-foreground: 181 67% 85%; /* Baby blue card text */
+  --border: 181 67% 40%; /* Baby blue borders */
+  --input: 249 58% 20%; /* Dark navy input */
+  --primary: 181 67% 65%; /* Baby blue #6ae0e2 */
+  --primary-foreground: 249 58% 12%; /* Deep navy on primary */
+  --secondary: 337 83% 79%; /* Pink #f69bbe */
+  --secondary-foreground: 249 58% 12%; /* Deep navy on secondary */
+  --accent: 139 54% 55%; /* Bright green */
+  --accent-foreground: 249 58% 12%; /* Deep navy on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 185 71% 85%;
-  --ring: 185 71% 69%;
+  --destructive-foreground: 181 67% 85%;
+  --ring: 181 67% 65%;
   --radius: 0.75rem;
   
-  /* Chart colors for dark theme */
-  --chart-1: 207 90% 54%; /* Blue */
-  --chart-2: 142 76% 46%; /* Green */
-  --chart-3: 45 93% 57%; /* Yellow */
-  --chart-4: 280 87% 57%; /* Purple */
-  --chart-5: 14 91% 64%; /* Orange */
+  /* Spectacular brand-based chart colors for dark */
+  --chart-1: 181 67% 65%; /* Baby blue */
+  --chart-2: 139 54% 55%; /* Bright green */
+  --chart-3: 337 83% 79%; /* Pink */
+  --chart-4: 181 67% 45%; /* Darker baby blue */
+  --chart-5: 139 54% 70%; /* Light green */
   
-  /* Sidebar colors for dark theme */
-  --sidebar-background: 195 60% 12%;
-  --sidebar-foreground: 195 100% 85%;
-  --sidebar-primary: 195 100% 60%;
-  --sidebar-primary-foreground: 195 80% 8%;
-  --sidebar-accent: 190 40% 18%;
-  --sidebar-accent-foreground: 195 100% 85%;
-  --sidebar-border: 190 40% 22%;
-  --sidebar-ring: 195 100% 60%;
+  /* Stunning dark sidebar with brand harmony */
+  --sidebar-background: 249 58% 14%;
+  --sidebar-foreground: 181 67% 85%;
+  --sidebar-primary: 181 67% 65%;
+  --sidebar-primary-foreground: 249 58% 12%;
+  --sidebar-accent: 337 83% 25%;
+  --sidebar-accent-foreground: 181 67% 85%;
+  --sidebar-border: 181 67% 30%;
+  --sidebar-ring: 181 67% 65%;
 }
 
 @layer base {
@@ -99,32 +99,32 @@
 }
 
 @layer components {
-  /* Glassmorphism effects for the AI consultant theme */
+  /* Glassmorphism effects with brand colors */
   .glassmorphism {
-    background: rgba(30, 41, 59, 0.4);
+    background: rgba(33, 23, 87, 0.4); /* Navy with transparency */
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(106, 224, 226, 0.2); /* Baby blue border */
   }
   
-  /* Chat specific styles */
+  /* Chat specific styles with brand gradient */
   .chat-gradient {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background: linear-gradient(135deg, #211757 0%, #38bd63 100%); /* Navy to green */
   }
   
   .message-bubble {
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(106, 224, 226, 0.2); /* Baby blue border */
   }
   
-  /* Voice recording animation */
+  /* Voice recording animation with baby blue */
   .voice-recording {
     animation: voice-pulse 1.5s infinite;
   }
   
   @keyframes voice-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(106, 224, 226, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(106, 224, 226, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(106, 224, 226, 0); }
   }
   
   /* Template card hover effects */
@@ -138,13 +138,13 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   }
   
-  /* Typing indicator animation */
+  /* Typing indicator animation with baby blue */
   .typing-dots span {
     display: inline-block;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #0891b2;
+    background-color: #6ae0e2;
     margin: 0 2px;
     animation: typing 1.4s infinite ease-in-out;
   }
@@ -201,46 +201,50 @@
     animation: pulse 3s infinite;
   }
   
-  /* Custom scrollbar for better dark theme integration */
+  /* Custom scrollbar with brand colors */
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
   }
   
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: rgba(30, 41, 59, 0.3);
+    background: rgba(33, 23, 87, 0.3); /* Navy track */
     border-radius: 3px;
   }
   
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(148, 163, 184, 0.3);
+    background: rgba(106, 224, 226, 0.5); /* Baby blue thumb */
     border-radius: 3px;
   }
   
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(148, 163, 184, 0.5);
+    background: rgba(106, 224, 226, 0.8); /* Brighter baby blue on hover */
   }
 }
 
 @layer utilities {
-  /* Text gradient utilities for brand elements */
+  /* Stunning brand color gradients */
   .text-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #6ae0e2 0%, #f69bbe 50%, #38bd63 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  /* Glow effects for interactive elements */
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  /* Magical glow effects with brand colors */
+  .glow-baby-blue {
+    box-shadow: 0 0 20px rgba(106, 224, 226, 0.4);
   }
   
-  .glow-purple {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(246, 155, 190, 0.4);
   }
   
   .glow-green {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 20px rgba(56, 189, 99, 0.4);
+  }
+  
+  .glow-navy {
+    box-shadow: 0 0 20px rgba(33, 23, 87, 0.4);
   }
   
   /* Line clamp utilities for text truncation */
@@ -259,15 +263,16 @@
   }
 }
 
-/* Print styles */
+/* Print styles with brand elegance */
 @media print {
   body {
-    @apply bg-white text-black;
+    @apply bg-white;
+    color: #211757; /* Navy text for print */
   }
   
   .glassmorphism {
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: rgba(106, 224, 226, 0.1); /* Light baby blue tint */
+    border: 1px solid #6ae0e2; /* Baby blue border */
   }
 }
 
