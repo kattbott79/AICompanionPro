@@ -107,16 +107,32 @@ export default function Chat() {
             />
 
             {/* Brand Color Demo */}
-            <div className="flex gap-2 p-3 bg-white/70 rounded-lg">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Baby Blue
-              </Button>
-              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                Pink
-              </Button>
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
-                Green
-              </Button>
+            <div className="flex flex-col gap-2 p-3 bg-white/70 rounded-lg">
+              <div className="text-sm font-medium text-gray-700 mb-2">Your Brand Colors:</div>
+              <div 
+                className="px-4 py-2 rounded text-white text-center font-medium"
+                style={{ backgroundColor: '#6ae0e2' }}
+              >
+                Baby Blue #6ae0e2
+              </div>
+              <div 
+                className="px-4 py-2 rounded text-white text-center font-medium"
+                style={{ backgroundColor: '#f69bbe' }}
+              >
+                Pink #f69bbe
+              </div>
+              <div 
+                className="px-4 py-2 rounded text-white text-center font-medium"
+                style={{ backgroundColor: '#38bd63' }}
+              >
+                Green #38bd63
+              </div>
+              <div 
+                className="px-4 py-2 rounded text-white text-center font-medium"
+                style={{ backgroundColor: '#211757' }}
+              >
+                Navy #211757
+              </div>
             </div>
 
             {/* Popular Templates Preview */}
