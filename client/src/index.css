@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* adopt.a.bot Theme - Exact Logo Colors */
+  /* adopt.a.bot Theme - Exact Brand Colors */
   --background: 0 0% 100%; /* Pure white background */
-  --foreground: 252 44% 24%; /* Deep purple from logo #2E1F5E */
-  --muted: 252 20% 95%; /* Very light purple tint */
-  --muted-foreground: 252 30% 45%; /* Medium purple muted text */
+  --foreground: 248 68% 20%; /* Navy #211757 */
+  --muted: 248 20% 95%; /* Very light navy tint */
+  --muted-foreground: 248 40% 45%; /* Medium navy muted text */
   --popover: 0 0% 100%; /* White popover */
-  --popover-foreground: 252 44% 24%; /* Deep purple popover text */
+  --popover-foreground: 248 68% 20%; /* Navy popover text */
   --card: 0 0% 100%; /* White card background */
-  --card-foreground: 252 44% 24%; /* Deep purple card text */
-  --border: 252 20% 88%; /* Light purple border */
-  --input: 252 15% 96%; /* Very light input background */
-  --primary: 186 77% 60%; /* Cyan blue from logo #4DD0E1 */
-  --primary-foreground: 0 0% 100%; /* White on primary */
-  --secondary: 14 100% 75%; /* Coral pink from logo #FF8A80 */
-  --secondary-foreground: 252 44% 24%; /* Purple on secondary */
-  --accent: 122 39% 49%; /* Green from logo #4CAF50 */
+  --card-foreground: 248 68% 20%; /* Navy card text */
+  --border: 248 20% 88%; /* Light navy border */
+  --input: 248 15% 96%; /* Very light input background */
+  --primary: 181 64% 64%; /* Baby blue #6ae0e2 */
+  --primary-foreground: 248 68% 20%; /* Navy on primary */
+  --secondary: 337 86% 80%; /* Pink #f69bbe */
+  --secondary-foreground: 248 68% 20%; /* Navy on secondary */
+  --accent: 140 55% 49%; /* Green #38bd63 */
   --accent-foreground: 0 0% 100%; /* White on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --ring: 186 77% 60%;
+  --ring: 181 64% 64%;
   --radius: 0.75rem;
   
   /* Chart colors */
@@ -44,26 +44,26 @@
 }
 
 .dark {
-  /* adopt.a.bot Dark Theme - Logo Purple Background */
-  --background: 252 44% 24%; /* Deep purple from logo #2E1F5E */
+  /* adopt.a.bot Dark Theme - Navy Background */
+  --background: 248 68% 20%; /* Navy #211757 */
   --foreground: 0 0% 95%; /* Nearly white text */
-  --muted: 252 40% 30%; /* Slightly lighter purple muted */
+  --muted: 248 50% 25%; /* Slightly lighter navy muted */
   --muted-foreground: 0 0% 75%; /* Light gray muted text */
-  --popover: 252 44% 28%; /* Slightly lighter purple popover */
+  --popover: 248 68% 24%; /* Slightly lighter navy popover */
   --popover-foreground: 0 0% 95%; /* Nearly white popover text */
-  --card: 252 44% 28%; /* Slightly lighter purple card */
+  --card: 248 68% 24%; /* Slightly lighter navy card */
   --card-foreground: 0 0% 95%; /* Nearly white card text */
-  --border: 252 30% 35%; /* Purple border */
-  --input: 252 40% 32%; /* Dark purple input */
-  --primary: 186 77% 60%; /* Cyan blue from logo #4DD0E1 */
-  --primary-foreground: 252 44% 24%; /* Deep purple on primary */
-  --secondary: 14 100% 75%; /* Coral pink from logo #FF8A80 */
-  --secondary-foreground: 252 44% 24%; /* Purple on secondary */
-  --accent: 122 39% 49%; /* Green from logo #4CAF50 */
-  --accent-foreground: 252 44% 24%; /* Purple on accent */
+  --border: 248 40% 30%; /* Navy border */
+  --input: 248 50% 28%; /* Dark navy input */
+  --primary: 181 64% 64%; /* Baby blue #6ae0e2 */
+  --primary-foreground: 248 68% 20%; /* Navy on primary */
+  --secondary: 337 86% 80%; /* Pink #f69bbe */
+  --secondary-foreground: 248 68% 20%; /* Navy on secondary */
+  --accent: 140 55% 49%; /* Green #38bd63 */
+  --accent-foreground: 248 68% 20%; /* Navy on accent */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 95%;
-  --ring: 186 77% 60%;
+  --ring: 181 64% 64%;
   --radius: 0.75rem;
   
   /* Chart colors for dark theme */
