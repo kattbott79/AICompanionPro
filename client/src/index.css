@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Beautiful Emotional AI - Pure Blue/Cyan/Teal Theme */
-  --background: 195 100% 98%; /* Light cyan-blue background */
-  --foreground: 195 100% 15%; /* Deep cyan text */
-  --muted: 190 60% 92%; /* Light blue muted */
-  --muted-foreground: 195 80% 25%; /* Cyan muted text */
-  --popover: 195 100% 98%; /* Light cyan popover */
-  --popover-foreground: 195 100% 15%; /* Deep cyan popover text */
-  --card: 195 100% 98%; /* Light cyan card */
-  --card-foreground: 195 100% 15%; /* Deep cyan card text */
-  --border: 190 40% 80%; /* Light blue border */
-  --input: 190 40% 85%; /* Light blue input */
-  --primary: 195 100% 50%; /* Bright cyan primary */
-  --primary-foreground: 195 100% 98%; /* Light cyan on primary */
-  --secondary: 160 60% 45%; /* Calming teal secondary */
-  --secondary-foreground: 195 100% 15%; /* Deep cyan on secondary */
-  --accent: 270 95% 60%; /* Purple accent for visual interest */
-  --accent-foreground: 195 100% 98%; /* Light cyan on accent */
+  /* adopt.a.bot Theme - Neon Green & Navy Blue */
+  --background: 210 15% 97%; /* Light background with slight blue tint */
+  --foreground: 235 50% 15%; /* Deep navy text */
+  --muted: 210 20% 92%; /* Light muted background */
+  --muted-foreground: 235 30% 40%; /* Navy muted text */
+  --popover: 210 15% 98%; /* Light popover */
+  --popover-foreground: 235 50% 15%; /* Deep navy popover text */
+  --card: 210 15% 98%; /* Light card background */
+  --card-foreground: 235 50% 15%; /* Deep navy card text */
+  --border: 210 25% 85%; /* Light border */
+  --input: 210 25% 90%; /* Light input background */
+  --primary: 120 100% 55%; /* Bright neon green primary */
+  --primary-foreground: 235 50% 15%; /* Dark navy on primary */
+  --secondary: 235 45% 25%; /* Dark navy secondary */
+  --secondary-foreground: 120 100% 95%; /* Light on secondary */
+  --accent: 120 80% 45%; /* Darker green accent */
+  --accent-foreground: 235 50% 15%; /* Dark navy on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 195 100% 98%;
-  --ring: 195 100% 50%;
+  --destructive-foreground: 210 15% 98%;
+  --ring: 120 100% 55%;
   --radius: 0.75rem;
   
   /* Chart colors */
@@ -44,26 +44,26 @@
 }
 
 .dark {
-  /* Beautiful Dark Emotional AI - Pure Blue/Cyan/Teal Theme */
-  --background: 195 80% 8%; /* Deep cyan-blue background */
-  --foreground: 195 100% 85%; /* Light cyan text */
-  --muted: 190 60% 15%; /* Dark blue muted */
-  --muted-foreground: 195 60% 70%; /* Light cyan muted text */
-  --popover: 195 80% 10%; /* Deep cyan popover */
-  --popover-foreground: 195 100% 85%; /* Light cyan popover text */
-  --card: 195 80% 10%; /* Deep cyan card */
-  --card-foreground: 195 100% 85%; /* Light cyan card text */
-  --border: 190 40% 25%; /* Dark blue border */
-  --input: 190 40% 20%; /* Dark blue input */
-  --primary: 195 100% 60%; /* Bright cyan primary */
-  --primary-foreground: 195 80% 8%; /* Deep cyan on primary */
-  --secondary: 160 70% 35%; /* Deep teal secondary */
-  --secondary-foreground: 195 100% 85%; /* Light cyan on secondary */
-  --accent: 270 95% 65%; /* Purple accent for visual interest */
-  --accent-foreground: 195 80% 8%; /* Deep cyan on accent */
+  /* adopt.a.bot Dark Theme - Neon Green & Deep Navy */
+  --background: 235 60% 8%; /* Deep navy background */
+  --foreground: 120 100% 85%; /* Bright green text */
+  --muted: 235 50% 12%; /* Dark navy muted */
+  --muted-foreground: 120 60% 70%; /* Light green muted text */
+  --popover: 235 60% 10%; /* Deep navy popover */
+  --popover-foreground: 120 100% 85%; /* Bright green popover text */
+  --card: 235 60% 10%; /* Deep navy card */
+  --card-foreground: 120 100% 85%; /* Bright green card text */
+  --border: 235 40% 20%; /* Dark navy border */
+  --input: 235 40% 15%; /* Dark navy input */
+  --primary: 120 100% 55%; /* Bright neon green primary */
+  --primary-foreground: 235 60% 8%; /* Deep navy on primary */
+  --secondary: 235 50% 18%; /* Dark navy secondary */
+  --secondary-foreground: 120 100% 85%; /* Bright green on secondary */
+  --accent: 120 80% 45%; /* Darker green accent */
+  --accent-foreground: 235 60% 8%; /* Deep navy on accent */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 195 100% 98%;
-  --ring: 195 100% 60%;
+  --destructive-foreground: 120 100% 95%;
+  --ring: 120 100% 55%;
   --radius: 0.75rem;
   
   /* Chart colors for dark theme */
