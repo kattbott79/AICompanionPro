@@ -51,22 +51,22 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
   const [themeName, setThemeName] = useState("My Custom Theme");
   
   const [customTheme, setCustomTheme] = useState<CustomTheme>({
-    name: "My Custom Theme",
+    name: "adopt.a.bot Brand",
     colors: {
       background: "#ffffff",
-      foreground: "#0f172a",
-      primary: "#3b82f6",
-      secondary: "#64748b",
-      accent: "#8b5cf6",
-      muted: "#f1f5f9",
+      foreground: "#211757",
+      primary: "#6ae0e2",
+      secondary: "#f69bbe",
+      accent: "#38bd63",
+      muted: "#f0f9ff",
       card: "#ffffff",
-      border: "#e2e8f0"
+      border: "#e0f2fe"
     },
     gradients: {
-      primary: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)",
-      secondary: "linear-gradient(135deg, #64748b 0%, #475569 100%)",
-      accent: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
-      background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
+      primary: "linear-gradient(135deg, #6ae0e2 0%, #38bd63 100%)",
+      secondary: "linear-gradient(135deg, #f69bbe 0%, #6ae0e2 100%)",
+      accent: "linear-gradient(135deg, #38bd63 0%, #6ae0e2 100%)",
+      background: "linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)"
     }
   });
 
@@ -163,22 +163,22 @@ export function ThemeCustomizer({ onClose }: ThemeCustomizerProps) {
 
   const resetToDefault = () => {
     setCustomTheme({
-      name: "Default Theme",
+      name: "adopt.a.bot Brand",
       colors: {
         background: "#ffffff",
-        foreground: "#0f172a",
-        primary: "#3b82f6",
-        secondary: "#64748b",
-        accent: "#8b5cf6",
-        muted: "#f1f5f9",
+        foreground: "#211757",
+        primary: "#6ae0e2",
+        secondary: "#f69bbe",
+        accent: "#38bd63",
+        muted: "#f0f9ff",
         card: "#ffffff",
-        border: "#e2e8f0"
+        border: "#e0f2fe"
       },
       gradients: {
-        primary: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)",
-        secondary: "linear-gradient(135deg, #64748b 0%, #475569 100%)",
-        accent: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
-        background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)"
+        primary: "linear-gradient(135deg, #6ae0e2 0%, #38bd63 100%)",
+        secondary: "linear-gradient(135deg, #f69bbe 0%, #6ae0e2 100%)",
+        accent: "linear-gradient(135deg, #38bd63 0%, #6ae0e2 100%)",
+        background: "linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)"
       }
     });
   };
