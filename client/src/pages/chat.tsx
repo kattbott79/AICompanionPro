@@ -52,6 +52,16 @@ export default function Chat() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#211757] via-[#1a1344] to-[#211757]">
+      {/* Hero Art Section with Glow */}
+      <div className="relative flex justify-center items-center py-8">
+        <div className="absolute w-[420px] h-[180px] rounded-full blur-2xl opacity-40 bg-gradient-to-tr from-[#f69bbe] via-[#6ae0e2] to-[#38bd63] z-0" />
+        <img
+          src="/attached_assets/adopt.a.bot.png"
+          alt="adopt.a.bot hero art"
+          className="max-w-xl w-full firefly-glow drop-shadow-2xl rounded-2xl relative z-10"
+          style={{ background: 'rgba(255,255,255,0.05)' }}
+        />
+      </div>
       {/* Main Layout */}
       <div className="flex h-screen">
         {/* Desktop Sidebar */}
@@ -77,16 +87,16 @@ export default function Chat() {
                 variant={showTemplates ? "default" : "ghost"}
                 size="sm"
                 onClick={() => setShowTemplates(!showTemplates)}
-                className="w-full justify-start bg-gradient-to-r from-[#f69bbe] to-[#e885a8] text-white hover:from-[#e885a8] hover:to-[#d971a1] border-0"
+                className="w-full justify-start btn-gradient"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
                 Browse Templates
               </Button>
-              <Button size="sm" className="w-full justify-start bg-gradient-to-r from-[#38bd63] to-[#2da550] text-white hover:from-[#2da550] hover:to-[#228d3e] border-0">
+              <Button size="sm" className="w-full justify-start btn-gradient">
                 <HelpCircle className="w-4 h-4 mr-2" />
                 Help & Guide
               </Button>
-              <Button size="sm" className="w-full justify-start bg-gradient-to-r from-[#f69bbe] via-[#38bd63] to-[#6ae0e2] text-white hover:opacity-90 border-0">
+              <Button size="sm" className="w-full justify-start btn-gradient">
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
               </Button>
@@ -163,9 +173,9 @@ export default function Chat() {
                     </div>
                   </div>
 
-                  <Button 
-                    size="sm" 
-                    className="w-full mt-4 bg-gradient-to-r from-[#38bd63] to-[#f69bbe] text-white hover:opacity-90 border-0"
+                  <Button
+                    size="sm"
+                    className="w-full mt-4 btn-gradient"
                     onClick={() => setShowTemplates(true)}
                   >
                     <ExternalLink className="w-3 h-3 mr-2" />
@@ -238,7 +248,7 @@ export default function Chat() {
                   </div>
                   <Button 
                     onClick={() => setShowTemplates(false)}
-                    className="hidden lg:flex bg-gradient-to-r from-[#f69bbe] to-[#38bd63] text-white hover:opacity-90 border-0"
+                    className="hidden lg:flex btn-gradient"
                   >
                     Back to Chat
                   </Button>
@@ -256,10 +266,9 @@ export default function Chat() {
             <div className="flex-1 max-w-4xl mx-auto w-full bg-gradient-to-br from-[#6ae0e2] to-[#4dd4d7]">
               <ChatInterface
                 sessionId={sessionId}
-                onTemplateSelect={handleTemplateSelect}
                 onProviderChange={handleProviderChange}
                 onTemplateExplore={() => setShowTemplates(true)}
-                className="h-full"
+                className="h-full text-white placeholder-white [&_input]:text-white [&_input]:placeholder-white [&_textarea]:text-white [&_textarea]:placeholder-white"
               />
             </div>
           )}
@@ -272,7 +281,7 @@ export default function Chat() {
           <Button
             size="lg"
             onClick={() => setShowTemplates(true)}
-            className="rounded-full w-14 h-14 shadow-lg bg-gradient-to-br from-[#f69bbe] to-[#38bd63] hover:opacity-90 text-white border-0"
+            className="rounded-full w-14 h-14 shadow-lg btn-gradient"
           >
             <Sparkles className="w-6 h-6" />
           </Button>

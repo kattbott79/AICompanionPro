@@ -219,12 +219,80 @@
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgba(106, 224, 226, 0.8); /* Brighter baby blue on hover */
   }
+mon  
+  /* Firefly-inspired animated gradient background */
+  .firefly-gradient-bg {
+    background: linear-gradient(270deg, #6ae0e2, #b7cbb2, #6e4c7c, #211757, #b7cbb2, #6ae0e2);
+    background-size: 1200% 1200%;
+    animation: firefly-gradient 18s ease infinite;
+  }
+
+  @keyframes firefly-gradient {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Neon/Firefly glow effect */
+  .neon-glow {
+    box-shadow: 0 0 8px 2px #b7cbb2, 0 0 24px 6px #6e4c7c;
+  }
+
+  .firefly-glow {
+    text-shadow: 0 0 8px #b7cbb2, 0 0 16px #6e4c7c, 0 0 32px #211757;
+  }
+
+  /* Button gradient utility for muted green and deep plum */
+  .btn-gradient {
+    background: linear-gradient(90deg, #b7cbb2 0%, #6e4c7c 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 2px 16px 0 #6e4c7c44;
+    transition: filter 0.2s, box-shadow 0.2s;
+    /* Add fallback for browsers that don't support gradients */
+    background-color: #6e4c7c !important;
+  }
+  .btn-gradient:hover, .btn-gradient:focus {
+    filter: brightness(1.08) saturate(1.1);
+    box-shadow: 0 4px 24px 0 #6e4c7c66;
+  }
+
+  /* Fix for white text on white backgrounds */
+  .btn-gradient, .btn-gradient * {
+    color: #fff !important;
+    text-shadow: 0 1px 2px #211757cc;
+  }
+
+  /* Ensure .glassmorphism and .btn-gradient have enough contrast */
+  .glassmorphism {
+    background: rgba(33, 23, 87, 0.85) !important;
+    color: #fff !important;
+  }
+
+  /* Fix for card backgrounds being too light */
+  .card, .bg-card, .bg-background {
+    background-color: #211757 !important;
+    color: #fff !important;
+  }
+
+  /* Fix for text inputs on dark backgrounds */
+  input, textarea {
+    background-color: #2d2250 !important;
+    color: #fff !important;
+    border: 1px solid #6e4c7c !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #e0dbe6 !important;
+    opacity: 1 !important;
+  }
 }
 
 @layer utilities {
   /* Stunning brand color gradients */
   .text-gradient {
-    background: linear-gradient(135deg, #6ae0e2 0%, #f69bbe 50%, #38bd63 100%);
+    background: linear-gradient(135deg, #6ae0e2 0%, #b7cbb2 50%, #6e4c7c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
